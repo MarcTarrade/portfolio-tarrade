@@ -1,0 +1,21 @@
+@import './variables.css';
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    margin: 0 0;
+    font-weight: normal;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+svg {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
