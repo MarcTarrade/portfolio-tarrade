@@ -26,12 +26,6 @@ export default {
         object-fit: cover;
         z-index: -1;
     }
-    .wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
     .abstract-container {
         background-color: var(--background-variant);
         width: 100%;
