@@ -19,3 +19,22 @@ svg {
     height: 24px;
     vertical-align: middle;
 }
+
+.menu-margin {
+    height: 180px;
+    background-color: #FFF;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.view-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
