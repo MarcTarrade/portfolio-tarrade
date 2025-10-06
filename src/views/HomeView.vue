@@ -10,8 +10,9 @@ export default {
 <template>
     <div class="wrapper">
     <img src="/lac_allos.jpg" alt="lac_allos" class="background-image">
+    <h1 class="name-title">TARRADE Marc</h1>
         <div class="abstract-container">
-            <p class="abstract-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <p class="abstract-text">Passionné par les technologies web et la cybersécurité, je poursuis actuellement un Master en ingénierie logicielle à l’ISCOD en alternance chez SAP, où je participe à des projets liés à la cyber sécurité. Fort d’expériences variées en développement fullstack, en IA et en sécurité applicative, j’aime concevoir des solutions innovantes, performantes et sécurisées. Curieux, rigoureux et orienté résultats, je cherche à allier excellence technique et impact concret dans mes projets.</p>
         </div>
         <div class="about-container">
             <AboutShort></AboutShort>
@@ -25,6 +26,15 @@ export default {
         height: 100vh;
         object-fit: cover;
         z-index: -1;
+    }
+    .name-title {
+        position: absolute;
+        top: 30vh;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 4rem;
+        color: #FFF;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
     .abstract-container {
         background-color: var(--background-variant);

@@ -58,6 +58,7 @@ import MailIcon from './icons/MailIcon.vue';
         display: flex;
         justify-content: center;
         width: 100%;
+        background-color: #555555;
     }
     .menu {
         width: 80vw;
@@ -67,6 +68,7 @@ import MailIcon from './icons/MailIcon.vue';
         display: flex;
         padding: 0 2%;
         margin-top: 2vh;
+        margin-bottom: 2vh;
     }
     .menu-title-container {
         display: flex;
