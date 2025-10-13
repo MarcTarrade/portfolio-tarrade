@@ -4,7 +4,7 @@
 set -e
 
 # construire
-npm run build
+npm run build-only
 
 # Naviguez dans le répertoire de sortie de la compilation
 cd dist
