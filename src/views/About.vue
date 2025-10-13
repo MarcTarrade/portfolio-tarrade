@@ -144,7 +144,7 @@ export default {
             <div class="timeline">
                 <template v-for="(item, idx) in timeline" :key="idx">
                     <div :class="['timeline-item', idx % 2 === 0 ? 'right' : 'left']" @click="openModalIndex = idx">
-                        <img :src="item.img" :alt="item.title">
+                        <img :src="'/portfolio-tarrade/' + item.img" :alt="item.title">
                         <div class="timeline-content">
                             <p>{{ item.title }}</p>
                             <span>{{ item.date }}</span>
