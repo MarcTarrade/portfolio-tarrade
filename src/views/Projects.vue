@@ -11,7 +11,35 @@ export default {
         return {
             openModal: null,
             modalContent: { title: '', description: '', image: '' },
-            projects: [{
+            projects: [
+            {
+                title: "Cloud Active Defense",
+                image: "SunDEW_logo.png",
+                date: "2024-2026",
+                skills: [{name: "Angular", image: 'Angular_logo.svg.png'}, {name: "Node.js", image: 'nodejs_logo.svg'}, {name: "Postgres", image: 'postgres_logo.png'}, {name: "Docker", image: 'docker_logo.png'}, {name: "Kubernetes", image: 'k8s_logo.png'}],
+                shortDescription: `<a class="project-link" href="https://github.com/SAP/cloud-active-defense">Cloud Active Defense</a> est une application de cybersécurité développée pour piéger les attaquants et analyser leurs comportements. L'application permet de "s'auto défendre" grace a son système de détection d'intrusion et de réponse automatisée.`,
+                description: `<a class="project-link" href="https://github.com/SAP/cloud-active-defense">Cloud Active Defense</a> est une application de cybersécurité développée pour piéger les attaquants et analyser leurs comportements. L'application permet de "s'auto défendre" grace a son système de détection d'intrusion et de réponse automatisée.<br><br>
+                Ce projet faisait partie de mon alternance chez SAP en tant que développeur DevSecOps, où j'ai travaillé depuis la création du projet jusqu'à une version stable prête pour la production. J'ai participé à toutes les étapes du développement, de la conception à la mise en œuvre, en passant par les tests et le déploiement.`
+            },
+            {
+                title: "Portfolio",
+                image: "portfolio_screen.jpg",
+                date: "2025",
+                skills: [{name: "VueJS", image: 'Logo-Vuejs.png'}],
+                shortDescription: `Ce portfolio est une application web développée avec VueJS pour présenter mes compétences, projets et expériences professionnelles.`,
+                description: `Ce portfolio est une application web développée avec VueJS pour présenter mes compétences, projets et expériences professionnelles.<br><br>
+                `
+            },
+            {
+                title: "DataHub",
+                image: "ciffreobona_logo.png",
+                date: "2021-2022",
+                skills: [{name: "AngularJS", image: 'Angular_logo.svg.png'}, {name: "NodeJS", image: 'nodejs_logo.svg'}, {name: "MongoDB", image: 'mongo_logo.png'}, {name: "MySQL", image: 'mysql-logo.svg'}],
+                shortDescription: `Le DataHub est une application web interne développée pour <a class="project-link" href="https://www.ciffreo-bona.com">Ciffreo Bona</a>, une entreprise spécialisée dans le BTP et la construction. L'application vise à centraliser et gérer les données produit de l'entreprise de manière efficace.`,
+                description: `Le DataHub est une application web interne développée pour <a class="project-link" href="https://www.ciffreo-bona.com">Ciffreo Bona</a>, une entreprise spécialisée dans le BTP et la construction. L'application vise à centraliser et gérer les données produit de l'entreprise de manière efficace.<br><br>
+                J'ai travaillé sur ce projet en tant que développeur web full-stack. Mon rôle principal était de développer de nouvelle fonctionnalité et corriger des bugs en utilisant AngularJS pour le front-end et NodeJS pour le back-end.`
+            },
+            {
                 title: "Auribeau Judo",
                 image: "logo_aurib.jpg",
                 date: "2020",
@@ -67,7 +95,7 @@ export default {
     </div>
 </template>
 
-<style>
+<style scoped>
     .project-list {
         display: flex;
         flex-direction: row;
@@ -81,12 +109,16 @@ export default {
         border-radius: 8px;
         width: 20%;
         cursor: pointer;
+        margin: 0 1rem;
     }
 
     .project-image {
         max-width: 100%;
-        height: auto;
+        height: 20vh;
         border-radius: 4px;
+        display: block;
+        margin: 0 auto;
+        object-fit: contain;
     }
 
     .project-title {
@@ -114,12 +146,12 @@ export default {
         margin-top: 1rem;
     }
 
-    .project-link {
+    ::v-deep(.project-link) {
         color: #3498db;
         text-decoration: none;
     }
 
-    .project-link:hover {
+    ::v-deep(.project-link:hover) {
         text-decoration: underline;
     }
     
@@ -154,6 +186,7 @@ export default {
     .modal-project-image {
         display: block;
         margin: 0 auto;
+        height: 20vh;
         margin-bottom: 2rem;
     }
     .modal-project-description {
