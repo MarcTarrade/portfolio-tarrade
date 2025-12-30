@@ -27,6 +27,10 @@ import MailIcon from './icons/MailIcon.vue';
                     <HomeIcon class="menu-icon"/>
                     <p class="menu-link">Accueil</p>
                 </router-link>
+                <router-link class="menu-item" to="/presentation">
+                    <PersonIcon class="menu-icon"/>
+                    <p class="menu-link">Presentation</p>
+                </router-link>
                 <router-link class="menu-item" to="/about">
                     <PersonIcon class="menu-icon"/>
                     <p class="menu-link">A propos</p>
