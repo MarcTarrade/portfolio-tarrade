@@ -14,8 +14,8 @@ export default {
             {
                 name: "Angular & Typescript",
                 image: "Angular_logo.svg.png",
-                level: "Intermédiaire",
-                percentage: 60,
+                level: "Avancé",
+                percentage: 70,
                 definition: "Angular est un framework front-end moderne, basé sur TypeScript, permettant de développer des applications web dynamiques et modulaires. Dans un contexte professionnel, maîtriser Angular et TypeScript signifie créer des interfaces performantes, maintenables et sécurisées, tout en facilitant la collaboration au sein d’équipes de développement.Actuellement, Angular et TypeScript sont des compétences très recherchées pour garantir performance, sécurité et évolutivité des projets front-end",
                 projects: [
                     {
@@ -43,8 +43,8 @@ export default {
             {
                 name: "Node.js",
                 image: "nodejs_logo.svg",
-                level: "Intermédiaire",
-                percentage: 60,
+                level: "Avancé",
+                percentage: 80,
                 definition: "Node.js est un environnement d’exécution JavaScript côté serveur. Il permet de développer des applications performantes et scalables, notamment des API et des services web, en utilisant un modèle asynchrone et événementiel. Dans un contexte professionnel, Node.js est largement utilisé pour concevoir des architectures modernes, efficaces et adaptées aux besoins des applications web actuelles.",
                 projects: [
                     {
@@ -72,8 +72,8 @@ export default {
             {
                 name: "Docker",
                 image: "docker_logo.png",
-                level: "Intermédiaire",
-                percentage: 60,
+                level: "Avancé",
+                percentage: 70,
                 definition: "Docker est une plateforme de conteneurisation qui permet de créer, déployer et exécuter des applications de manière isolée et reproductible. En encapsulant une application avec ses dépendances dans des conteneurs légers, Docker garantit un comportement cohérent entre les environnements de développement, de test et de production. Dans un contexte professionnel, Docker facilite le déploiement, la scalabilité et la maintenance des applications",
                 projects: [
                     {
@@ -121,7 +121,7 @@ export default {
                 name: "Vue.js",
                 image: "Logo-Vuejs.png",
                 level: "Intermédiaire",
-                percentage: 60,
+                percentage: 50,
                 definition: "Vue.js est un framework JavaScript progressif dédié au développement d’interfaces utilisateur. Il permet de créer des applications web réactives, modulaires et performantes, tout en restant simple à prendre en main. Dans un contexte professionnel, Vue.js est apprécié pour sa flexibilité et sa facilité d’intégration, aussi bien sur des projets existants que sur des applications modernes de plus grande envergure",
                 projects: [
                     {
@@ -144,8 +144,8 @@ export default {
             {
                 name: "PHP",
                 image: "php-logo.png",
-                level: "Intermédiaire",
-                percentage: 60,
+                level: "Débutant",
+                percentage: 30,
                 definition: "PHP est un langage de programmation côté serveur principalement utilisé pour le développement d’applications web dynamiques. Il permet de traiter des données, d’interagir avec des bases de données et de générer du contenu HTML de manière efficace. Dans un contexte professionnel, PHP reste largement utilisé pour concevoir des applications web robustes, maintenables et intégrées à de nombreux écosystèmes existants",
                 projects: [
                     {
@@ -193,8 +193,8 @@ export default {
             {
                 name: "Capacité d'auto-formation",
                 image: "autoformation.png",
-                level: "Intermédiaire",
-                percentage: 60,
+                level: "Avancé",
+                percentage: 70,
                 definition: "La capacité d’autoformation est une compétence clé pour un développeur, lui permettant d’apprendre de manière autonome et continue face à l’évolution rapide des technologies. Elle consiste à savoir identifier ses besoins, rechercher des ressources pertinentes et expérimenter afin d’acquérir de nouvelles compétences ou d’approfondir des connaissances existantes",
                 projects: [
                     {
@@ -219,7 +219,7 @@ export default {
                 name: "Communication",
                 image: "communication.png",
                 level: "Intermédiaire",
-                percentage: 60,
+                percentage: 40,
                 definition: "Lors de mon alternance chez SAP, j’ai développé mon projet en autonomie, avec l’accompagnement de mon tuteur qui me fournissait des orientations de conception. Nous avons ainsi beaucoup communiqué sur l’avancement du projet. J’ai également présenté le projet à des profils techniques et non techniques, et rédigé une documentation détaillée destinée aux futurs développeurs en charge du projet",
                 projects: [
                     {
@@ -244,7 +244,7 @@ export default {
                 name: "Relation client",
                 image: "relation-client.png",
                 level: "Intermédiaire",
-                percentage: 60,
+                percentage: 50,
                 definition: "La relation client désigne l'ensemble des interactions et des échanges entre une entreprise et ses clients, visant à établir et maintenir une relation de confiance et de satisfaction mutuelle",
                 projects: [
                     {
