@@ -48,7 +48,9 @@ export default {
     border-radius: 8px;
     min-width: 300px;
     max-width: 70vw;
+    max-height: 80vh;
     position: relative;
+    overflow: auto;
 }
 
 .modal-close {
