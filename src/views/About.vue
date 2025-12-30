@@ -1,10 +1,12 @@
 <script>
 import AboutShort from '@/components/About-short.vue';
 import Modal from '@/components/Modal.vue';
+import CalendarIcon from '@/components/icons/CalendarIcon.vue';
 export default {
     components: {
         AboutShort,
-        Modal
+        Modal,
+        CalendarIcon
     },
     data() {
         return {
@@ -12,111 +14,255 @@ export default {
             timeline: [
                 {
                     img: "/SAP.png",
-                    title: "SAP: Alternant DevOps cyber sécurité",
-                    date: "2024 - 2026",
-                    modalContent: `Developpement d'une application open source permettant de protéger n'importe quel application web contre des attaques malveillantes.
-                    Cette application a pour but de détecter et bloquer les requêtes suspectes en analysant le trafic HTTP entrant et sortant grace à un reverse proxy.
-                    En plus de détecter l'application peut permettre d'injecter des leurres dans les requetes HTTP pour tenter les attaquants. L'application vient avec un "dashboard" web qui permet de gérer
-                    le configuration de l'application, des leurres, de la détection et des logs d'alertes suite aux detections ainsi que gérer le deploiement de l'application dans son cluster Kubernetes<br><br>
-                    <b>Technologies utilisées :</b><br>
-                    - Backend: Node.js, Express.js<br>
-                    - Frontend: Angular<br>
-                    - Systeme de gestion de base de données: Postgres<br>
-                    - Envoy avec plugin Go pour le reverse-proxy<br>
-                    - Deploiement: Docker, Kubernetes, Helm, Kyma (Cloud)<br>
-                    - Autre: Git, CI/CD (Github actions)<br><br>
-                    Ce projet est en cours de developpement et est déjà open source sur Github: <a href="https://github.com/SAP/cloud-active-defense">Cloud Active Defense</a>                    `
+                    title: "Développeur en cyber sécurité",
+                    place: "SAP",
+                    type: "experience",
+                    date: "Février 2024 - Mars 2026",
+                    responsibility: "Développeur DevSecOps",
+                    status: 'Alternant',
+                    details: [
+                        "Apprentissage des technologies utilisés",
+                        "Amélioration et maintenance de l’application existante",
+                        "Participation à un Threat Modeling",
+                        "Conception de l’architecture de la solution",
+                        "Développement de l’application de gestion de la solution",
+                        "Conteneurisation et configuration pour un déploiement dans le cloud",
+                        "Documentation des API de l’application",
+                        "Intégration d’une pipeline CI/CD depuis Github actions"
+                    ],
+                    projects: [
+                        {
+                            name: "Cloud Active Defense",
+                            link: "/projects?project=cloud-active-defense"
+                        }
+                    ],
+                    skills: [
+                        {
+                            name: "NodeJS",
+                            image: "Node.js_logo_vert.png",
+                            link: "/skills?skill=NodeJS"
+                        },
+                        {
+                            name: "Angular",
+                            image: "Angular_logo.svg.png",
+                            link: "/skills?skill=Angular"
+                        },
+                        {
+                            name: "Docker",
+                            image: "docker_logo.png",
+                            link: "/skills?skill=Docker"
+                        },
+                        {
+                            name: "Kubernetes",
+                            image: "k8s_logo.png",
+                            link: "/skills?skill=Kubernetes"
+                        },
+                        {
+                            name: "Communication",
+                            image: "communication.png",
+                            link: "/skills?skill=Communication"
+                        },
+                        {
+                            name: "Capacité d'autoformation",
+                            image: "autoformation.png",
+                            link: "/skills?skill=Autoformation"
+                        },
+                        {
+                            name: "Autonomie",
+                            image: "autonomie.png",
+                            link: "/skills?skill=Autonomie"
+                        }
+                    ],
                 },
                 {
                     img: "/iscod.png",
-                    title: "Iscod: Mastère Expert en Ingénierie du Logiciel",
-                    date: "2024 - 2026",
-                    modalContent: `Diplome de Mastère en Ingénierie du Logiciel toujours en cours.
-                    Formation axée sur la conception, le developpement et l'architecture des logiciels, ainsi que la gestion d'un projet<br><br>
-                    <b>Compétences acquises :</b><br>
-                    - Analyse et conception de logiciels<br>
-                    - Architecture logicielle<br>
-                    - Framework (Spring, Angular, Android Kotlin)<br>
-                    - DevOps (CI/CD, Docker, Kubernetes)<br><br>
-                    Cette formation me permet de me spécialiser dans l'ingénierie logicielle et d'acquérir des compétences avancées pour concevoir, développer et gérer des logiciels complexes et performants`
+                    title: "Mastère Expert en Ingénierie du Logiciel",
+                    place: "ISCOD",
+                    type: "formation",
+                    date: "Février 2024 - Mars 2026",
+                    description: "L'Institut Supérieur de Conception et de Développement (ISCOD) est un établissement spécialisé dans la formation d'experts en ingénierie logicielle. La pédagogie privilégie l'approche pratique avec des projets concrets et un accompagnement personnalisé pour développer l'expertise technique et les compétences humaines essentielles au métier d'ingénieur logiciel",
+                    skills: [
+                        {
+                            name: "Angular",
+                            image: "Angular_logo.svg.png",
+                            link: "/skills?skill=Angular"
+                        },
+                        {
+                            name: "Docker",
+                            image: "docker_logo.png",
+                            link: "/skills?skill=Docker"
+                        },
+                        {
+                            name: "Kubernetes",
+                            image: "k8s_logo.png",
+                            link: "/skills?skill=Kubernetes"
+                        },
+                        {
+                            name: "Communication",
+                            image: "communication.png",
+                            link: "/skills?skill=Communication"
+                        },
+                    ]
                 },
                 {
                     img: "/nextsourcia.jpg",
-                    title: "NextSourcia: Developpeur FullStack",
-                    date: "2021 - 2022",
-                    modalContent: `Developpement et administration d'une application web pour un client de l'entreprise pour gérer leurs produits.<br>
-                    J'ai pendant un an pû travailler sur le developpement de nouvelles fonctionnalités pour cette application, ainsi que sur la maintenance et l'amélioration des fonctionnalités existantes.<br>
-                    J'etais en contact direct avec le client concernant les changements ou correction de l'application. Je pouvais également être appelé à maintenir une seconde application web en rapport avec les produits mais orienté gestion de stock. <br><br>
-                    <b>Technologies utilisées :</b><br>
-                    - Frontend: AngularJS, HTML, CSS<br>
-                    - Backend: Node.js<br>
-                    - Système de gestion de base de données: MySQL, MongoDB<br>
-                    - Système: Linux, SSH, GitLab<br><br>
-                    Je m'occupais également du déploiement de l'application si une mise à jour était nécessaire ou une bug était à résoudre.`
+                    title: "Developpeur Web",
+                    date: "Octobre 2021 - Septembre 2022",
+                    place: "NextSourcia",
+                    type: "experience",
+                    responsibility: "Developpeur full-stack",
+                    status: 'CDI',
+                    details: [
+                        "Maintenance d’une application web",
+                        "Développement de nouvelles fonctionnalités",
+                        "Correction de bug" ,
+                        "Réunion et appel avec le client",
+                        "Utilisation d’API d’entreprise externes"
+                    ],
+                    projects: [
+                        {
+                            name: "DataHub",
+                            link: "/projects?project=datahub"
+                        }
+                    ],
+                    skills: [
+                        {
+                            name: "Angular",
+                            image: "Angular_logo.svg.png",
+                            link: "/skills?skill=Angular"
+                        },
+                        {
+                            name: "NodeJS",
+                            image: "Node.js_logo_vert.png",
+                            link: "/skills?skill=NodeJS"
+                        },
+                        {
+                            name: "Communication",
+                            image: "communication.png",
+                            link: "/skills?skill=Communication"
+                        },
+                        {
+                            name: "Capacité d'autoformation",
+                            image: "autoformation.png",
+                            link: "/skills?skill=Autoformation"
+                        },
+                        {
+                            name: "Relation client",
+                            image: "relation-client.png",
+                            link: "/skills?skill=RelationClient"
+                        }
+                    ]
                 },
                 {
                     img: "/SAP.png",
-                    title: "SAP: Stagiaire developpeur cyber sécurité",
+                    title: "Developpeur cyber sécurité",
                     date: "Mai - Août 2021",
-                    modalContent: `Developpement de l'architecture de deploiement d'un projet de cyber sécurité en utilisant des conteneurs Docker orchestrés avec Kubernetes.<br>
-                    Cette architecture permettait de déployer, gérer, et mettre à l'échelle les différents composants du projet de manière efficace et automatisée.<br>
-                    En plus de ceci, j'ai dû installer un moyen de recupérer les logs de l'application pour pouvoir les envoyer à un système qui permetterai de les centraliser et les gérer plus simplement<br><br>
-                    <b>Technologies utilisées :</b><br>
-                    - Docker pour la containerisation des applications<br>
-                    - Kubernetes pour l'orchestration des conteneurs<br>
-                    - Fluentbit pour la récupération des logs
-                    - Splunk pour tout centraliser<br><br>
-                    Grace à mon travail, l'équipe à pû utiliser mon architecture pour déployer le projet.`
+                    place: "SAP",
+                    type: "experience",
+                    responsibility: "Developpeur DevOps",
+                    status: 'Stage',
+                    details: [
+                        "Configuration de déploiement de l’application sur Kubernetes",
+                        "Intégration d’une pipeline de logs pour récupérer les alertes",
+                        "Installation d’une application de consultation et de centralisation des logs"
+                    ],
+                    skills: [
+                        {
+                            name: "Docker",
+                            image: "docker_logo.png",
+                            link: "/skills?skill=Docker"
+                        },
+                        {
+                            name: "Kubernetes",
+                            image: "k8s_logo.png",
+                            link: "/skills?skill=Kubernetes"
+                        }
+                    ]
                 },
                 {
                     img: "/iut_nice.jpg",
-                    title: "IUT Nice cote d'azur: Licence DAM",
+                    title: "Licence Développement d’applications mobiles",
                     date: "2020 - 2021",
-                    modalContent: `Diplome de licence professionnelle en Développement d'Applications Mobiles.
-                    Formation axée sur le développement mobile, la conception d'applications, et l'expérience utilisateur.<br><br>
-                    <b>Compétences acquises :</b><br>
-                    - Développement mobile Android(Kotlin), iOS(Swift)<br>
-                    - Conception d'interfaces utilisateur (UI/UX)<br>
-                    - Developpement web (React)<br>
-                    - Gestion de base de données (SQL, MongoDB)<br><br>
-                    Cette formation m'a permis de me spécialiser dans le développement mobile et d'acquérir des compétences pratiques pour concevoir et développer des applications mobiles performantes et conviviales.`
+                    place: "IUT Nice Cote d'Azur",
+                    type: "formation",
+                    description: "L’IUT Nice Côte d’Azur, rattaché à l’Université Côte d’Azur, propose des formations professionnalisantes orientées vers une insertion rapide dans le monde du travail, en combinant enseignements théoriques, projets concrets et liens étroits avec les entreprises. La Licence Professionnelle DAM (Développement d’Applications Mobiles) s’inscrit pleinement dans cette logique : elle forme des développeurs capables de concevoir, développer et maintenir des applications mobiles, en maîtrisant les technologies, les bonnes pratiques de développement et le cycle de vie complet d’une application. Axée sur la pratique, les projets et l’expérience en entreprise, cette formation permet d’acquérir des compétences directement exploitables sur le marché du travail",
+                    skills: [
+                        {
+                            name: "NodeJS",
+                            image: "Node.js_logo_vert.png",
+                            link: "/skills?skill=NodeJS"
+                        },
+                        {
+                            name: "Communication",
+                            image: "communication.png",
+                            link: "/skills?skill=Communication"
+                        },
+                        {
+                            name: "Docker",
+                            image: "docker_logo.png",
+                            link: "/skills?skill=Docker"
+                        }
+                    ]
                 },
                 {
                     img: "/SAP.png",
-                    title: "SAP: Stagiaire developpeur IA",
-                    date: "Janvier - Février 2020",
-                    modalContent: `Developpement d'un prototype d'IA pour détecter la présence de personne via des caméras dans l'entreprise.
-                    L'objectif de ce prototype était de l'installer sur le système de caméra du batiment de l'entreprise et de flouter le visage des personnes afin de les anynomiser.<br><br>
-                    <b>Technologies utilisées :</b><br>
-                    - Python pour le programme de machine learning<br><br>
-                    - DarkFlow & Yolo pour la reconnaissance faciale (avec l'utilisation de TensorFlow et OpenCV)<br>
-                    Ce prototype a pû être deployé avant la fin de mon stage sur le système de caméra de l'entreprise, et même affiché en temps réel sur un écran dans le hall d'entrée.`
+                    title: "Developpeur IA",
+                    date: "Janvier 2020 - Février 2020",
+                    place: "SAP",
+                    type: "experience",
+                    responsibility: "Developpeur machine learning",
+                    status: 'Stage',
+                    details: [
+                        "Apprentissage des technologies de machine learning",
+                        "Developpement d’un script de machine learning detectant des objets sur une image",
+                        "Adaptation de ce script en application pour détecter sur une vidéo",
+                        "Déploiement de l’application sur le réseau de caméra de l’entreprise"
+                    ]
                 },
                 {
                     img: "/SAP.png",
-                    title: "SAP: Stagiaire developpeur cyber sécurité",
-                    date: "Mai - Juin 2019",
-                    modalContent: `Developpement d'un module prototype pour un projet de cyber sécurité<br>
-                    Ce module consistait à analyser les requêtes HTTP entrantes via un reverse-proxy afin de détecter des anomalies potentielles ou des tentatives d'intrusion.<br><br>
-                    <b>Technologies utilisées :</b><br>
-                    - Node.js pour le developpement du module<br><br>
-                    Ce module devait être intégrer à un système plus grand qui consistait à piéger les attaquants en les redirigeant vers des honeypots (systèmes factices destinés à attirer les cyberattaquants).<br>`                    
+                    title: "Developpeur cyber sécurité",
+                    date: "Mai 2019 - Juin 2019",
+                    place: "SAP",
+                    type: "experience",
+                    responsibility: "Developpeur",
+                    status: 'Stage',
+                    details: [
+                        "Developpement d’un module d’analyse de requête http",
+                        "Participation à des réunions d’équipe"
+                    ],
+                    skills: [
+                        {
+                            name: "NodeJS",
+                            image: "Node.js_logo_vert.png",
+                            link: "/skills?skill=NodeJS"
+                        }
+                    ]
                 },
                 {
                     img: "/estienne_dorves.svg",
                     title: "Lycée Estienne d'Orves: BTS SIO",
                     date: "2018 - 2020",
-                    modalContent: `Diplome de brevet de technicien supérieur en Services Informatiques aux Organisations, option SLAM (Solutions Logicielles et Applications Métiers). 
-                    Formation axée sur le développement web, la gestion de bases de données, et les réseaux informatiques. 
-                    Projets réalisés en équipe, stages en entreprise pour une expérience pratique.<br><br>
-                    <b>Compétences acquises :</b><br>
-                    - Bases de programmation<br>
-                    - Développement web (HTML, CSS, JavaScript, PHP)<br>
-                    - Developpement logiciel (Python, C#)<br>
-                    - Gestion de bases de données (SQL, MySQL)<br>
-                    - Administration réseau<br>
-                    - Travail en équipe et gestion de projet<br><br>
-                    Cette formation m'a permis de développer des compétences techniques solides et une compréhension approfondie des environnements informatiques professionnels.`
+                    place: "Lycée Honoré Estienne d'Orves",
+                    type: "formation",
+                    description: "Le lycée Honoré d’Estienne d’Orves à Nice propose le BTS Services Informatiques aux Organisations (SIO), une formation Bac + 2 visant à former des techniciens capables de concevoir, déployer et maintenir des solutions informatiques adaptées aux besoins des entreprises. Le BTS SIO offre deux spécialisations, SLAM (développement d’applications) et SISR (systèmes et réseaux), et s’appuie sur un enseignement mêlant théorie, projets pratiques et stages en entreprise afin de préparer efficacement à l’insertion professionnelle ou à la poursuite d’études",
+                    skills: [
+                        {
+                            name: "PHP",
+                            image: "php-logo.png",
+                            link: "/skills?skill=PHP"
+                        },
+                        {
+                            name: "NodeJS",
+                            image: "Node.js_logo_vert.png",
+                            link: "/skills?skill=NodeJS"
+                        },
+                        {
+                            name: "Communication",
+                            image: "communication.png",
+                            link: "/skills?skill=Communication"
+                        }
+                    ]
                 }
             ]
         };
@@ -146,13 +292,70 @@ export default {
                     <div :class="['timeline-item', idx % 2 === 0 ? 'right' : 'left']" @click="openModalIndex = idx">
                         <img :src="'/portfolio-tarrade/' + item.img" :alt="item.title">
                         <div class="timeline-content">
-                            <p>{{ item.title }}</p>
-                            <span>{{ item.date }}</span>
+                            <h2>{{ item.title }}</h2>
+                            <span>{{ item.place }}</span>
+                            <div class="project-date-container">
+                                <CalendarIcon/>
+                                <p class="project-date">{{ item.date }}</p>
+                            </div>
                         </div>
                     </div>
                     <Modal :visible="openModalIndex === idx" @close="openModalIndex = null">
-                        <h2>{{ item.title }}</h2>
-                        <p v-html="item.modalContent"></p>
+                        <h2 class="experience-title">{{ item.title }} - {{ item.place }}</h2>
+                        <div class="project-date-container">
+                            <CalendarIcon/>
+                            <p class="project-date">{{ item.date }}</p>
+                        </div>
+                        <div class="experience" v-if="item.type == 'experience'">
+                            <div class="modal-content">
+                                <div class="horizontally">
+                                    <label>Responsabilité:</label>
+                                    <p class="responsability">{{ item.responsibility }}</p>
+                                </div>
+                                <div class="horizontally">
+                                    <label>Statut:</label>
+                                    <p class="status">{{ item.status }}</p>
+                                </div>
+                            </div>
+                            <div class="missions-container">
+                                <h3 class="missions">Details des missions:</h3>
+                                <ul>
+                                    <li v-for="(detail, dIdx) in item.details" :key="dIdx">{{ detail }}</li>
+                                </ul>
+                            </div>
+                            <div class="project-container" v-if="item.projects && item.projects.length">
+                                <h3 class="projects">Projets liés:</h3>
+                                <ul>
+                                    <li v-for="(project, pIdx) in item.projects" :key="pIdx">
+                                        <router-link class="project-link" :to="project.link">{{ project.name }}</router-link>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="skill-container" v-if="item.skills && item.skills.length">
+                                <h3 class="skills">Compétences:</h3>
+                                <div class="skills-container">
+                                    <router-link v-for="(skill, sIdx) in item.skills" :key="sIdx" :to="skill.link" class="skill-item">
+                                        <img :src="'/portfolio-tarrade/' + skill.image" :alt="skill.name" class="skill-image">
+                                        <p class="skill-text">{{ skill.name }}</p>
+                                    </router-link>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="formation" v-else-if="item.type == 'formation'">
+                            <div class="modal-content">
+                                <h3 class="description">A propos:</h3>
+                                <p class="formation-description">{{ item.description }}</p>
+                            </div>
+                            <div class="skill-container" v-if="item.skills && item.skills.length">
+                                <h3 class="skills">Compétences acquises:</h3>
+                                <div class="skills-container">
+                                    <router-link v-for="(skill, sIdx) in item.skills" :key="sIdx" :to="skill.link" class="skill-item">
+                                        <img :src="'/portfolio-tarrade/' + skill.image" :alt="skill.name" class="skill-image">
+                                        <p class="skill-text">{{ skill.name }}</p>
+                                    </router-link>
+                                </div>
+                            </div>
+                        </div>
                     </Modal>
                     <span v-if="idx < timeline.length-1" class="timeline-line"></span>
                 </template>
@@ -179,7 +382,9 @@ export default {
         right: -75px;
     }
     .left .timeline-content {
-        text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
         left: -75px;
     }
     .timeline-item img {
@@ -197,7 +402,7 @@ export default {
         color: var(--text-on-background);
         width: 50%;
     }
-    .timeline-content p {
+    .timeline-content h2 {
         margin: 0;
         font-size: 1.2rem;
         font-weight: bold;
@@ -212,5 +417,89 @@ export default {
         width: 2px;
         background-color: var(--tertiary-color);
         height: 100px;
+    }
+    .modal-content {
+        margin-top: 1rem;
+    }
+    .horizontally {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+    .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+    }
+    .skill-item {
+        display: flex;
+        align-items: center;
+        margin-right: 1rem;
+        margin-bottom: 0.5rem;
+        border: 1px solid #797979;
+        border-radius: 99px;
+        padding: 0.1rem 0.5rem;
+        text-decoration: none;
+        color: var(--text-on-background);
+        transition: 0.3s;
+    }
+    .skill-item:hover {
+        background-color: var(--sub-text);
+        color: var(--text-on-primary);
+    }
+    .skill-image {
+        max-width: 1.8rem;
+        margin-right: 0.2rem;
+    }
+    .skill-text {
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+    .experience-title {
+        margin-bottom: 0.5rem;
+        color: var(--secondary-color);
+    }
+    .project-date-container {
+        display: flex;
+        align-items: center;
+        background-color: #E0E1DD;
+        border: 1px solid #797979;
+        border-radius: 8px;
+        width: fit-content;
+        padding: 0 0.2rem;
+    }
+    .project-date {
+        color: #000;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+    .experience label, .formation label {
+        font-weight: bold;
+        margin-right: 0.5rem;
+        color: var(--secondary-color);
+    }
+    .missions-container, .project-container, .skill-container {
+        margin-top: 1.4rem;
+    }
+    .missions-container .missions, .project-container .projects, .skill-container .skills {
+        color: var(--secondary-color);
+        margin-bottom: 0.6rem;
+    }
+    .missions-container ul, .project-container ul {
+        padding-left: 1.2rem;
+    }
+    .missions-container li {
+        margin-bottom: 0.3rem;
+    }
+    .project-link {
+        text-decoration: none;
+        color: var(--tertiary-color);
+    }
+    .project-link:hover {
+        text-decoration: underline;
+    }
+    .modal-content .description {
+        margin-bottom: 1rem;
+        color: var(--secondary-color);
     }
 </style>
