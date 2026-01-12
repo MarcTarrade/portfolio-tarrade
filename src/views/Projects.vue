@@ -263,7 +263,7 @@ export default {
                     <div class="skill-container">
                         <h3 class="modal-sub-title">Compétences rattachés:</h3>
                         <div class="skills-container">
-                            <router-link v-for="(skill, sIdx) in project.skills" :key="sIdx" :to="skill.link" class="skill-item">
+                            <router-link v-for="(skill, sIdx) in project.skills" :key="sIdx" :to="skill.link" class="skill-item skill-item-modal">
                                 <img :src="'/portfolio-tarrade/' + skill.image" :alt="skill.name" class="skill-image">
                                 <p class="skill-text">{{ skill.name }}</p>
                             </router-link>
@@ -290,6 +290,11 @@ export default {
         width: 20%;
         cursor: pointer;
         margin: 0 1rem;
+        transition: all 0.3s ease;
+    }
+    .project-item:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transform: translateY(-4px);
     }
 
     .project-image {
@@ -352,7 +357,7 @@ export default {
         color: var(--text-on-background);
         transition: 0.3s;
     }
-    .skill-item:hover {
+    .skill-item-modal:hover {
         background-color: var(--sub-text);
         color: var(--text-on-primary);
     }

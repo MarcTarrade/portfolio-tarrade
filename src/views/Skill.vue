@@ -337,6 +337,7 @@ export default {
                         </div>
                         <Modal :visible="openModalIndex == idx" @close="openModalIndex = null">
                             <h2 class="modal-skill-title">{{ skill.name }}</h2>
+                            <img :src="skill.image" :alt="skill.name" class="modal-skill-image"/>
                             <h3 class="modal-sub-title">Ma définition:</h3>
                             <p class="modal-text">{{ skill.definition }}</p>
                             <div class="project-container">
@@ -385,6 +386,7 @@ export default {
                         </div>
                         <Modal :visible="openModalIndex == idx+6" @close="openModalIndex = null">
                             <h2 class="modal-skill-title">{{ skill.name }}</h2>
+                            <img :src="skill.image" :alt="skill.name" class="modal-skill-image"/>
                             <h3 class="modal-sub-title">Ma définition:</h3>
                             <p class="modal-text">{{ skill.definition }}</p>
                             <div class="project-container">
@@ -423,7 +425,7 @@ export default {
         display: flex;
         justify-content: space-between;
         margin-bottom: 4rem;
-        margin-top: 3rem;
+        margin-top: 1rem;
     }
     .technical, .soft {
         width: 48%;
@@ -449,6 +451,11 @@ export default {
         flex-direction: column;
         justify-content: space-between;
         cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .skill-item:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transform: translateY(-4px);
     }
 
     .skill-image {
@@ -493,6 +500,13 @@ export default {
     .modal-skill-title {
         margin-bottom: 1rem;
         color: var(--secondary-color);
+        text-align: center;
+    }
+    .modal-skill-image {
+        display: block;
+        margin: 0 auto;
+        height: 20vh;
+        margin-bottom: 2rem;
     }
     .modal-sub-title {
         margin-top: 1.4rem;

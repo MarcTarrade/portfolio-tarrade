@@ -24,7 +24,7 @@ import AboutIcon from './icons/AboutIcon.vue';
             <div class="menu-title-container">
                 <p class="menu-title">TARRADE Marc</p>
             </div>
-            <nav class="menu-item-container">
+            <nav class="menu-item-container" role="navigation">
                 <router-link class="menu-item" to="/">
                     <HomeIcon class="menu-icon"/>
                     <p class="menu-link">Accueil</p>
@@ -49,7 +49,7 @@ import AboutIcon from './icons/AboutIcon.vue';
             <div class="contact-container">
                 <button class="contact-btn">
                     <MailIcon class="contact-icon"/>
-                    <router-link class="menu-link" to="/contact">Contact</router-link>
+                    <router-link class="contact-link" to="/contact">Contact</router-link>
                 </button>
             </div>
         </header>
@@ -99,17 +99,21 @@ import AboutIcon from './icons/AboutIcon.vue';
         align-items: center;
         text-decoration: none;
     }
+    .menu-item:hover .menu-link, .menu-item:hover .menu-icon {
+        color: #FFF;
+    }
     .menu-icon {
         width: 32px;
         height: 32px;
-        color: var(--text);
+        color: var(--primary-color);
         margin-right: 0.5rem;
+        transition: color 0.3s ease;
     }
     .menu-link {
         text-decoration: none;
-        color: var(--text);
+        color: var(--primary-color);
         font-size: 1.3rem;
-        
+        transition: color 0.3s ease;
     }
     .contact-container {
         display: flex;
@@ -124,14 +128,23 @@ import AboutIcon from './icons/AboutIcon.vue';
         color: var(--text);
         border: none;
         border-radius: 50px;
-        padding: 1.3rem 1.5rem;
+        padding: 1.3rem 1.7rem;
         cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .contact-btn:hover {
+        background-color: var(--primary-color);
     }
     .contact-icon {
         width: 24px;
         height: 24px;
         margin-right: 0.5rem;
         color: var(--text);
+    }
+    .contact-link {
+        text-decoration: none;
+        color: var(--text);
+        font-size: 1.2rem;
     }
 
 </style>

@@ -2,7 +2,7 @@
     <footer class="footer">
         <div class="left">
             <div class="footer-title">
-                © 2025 TARRADE Marc
+                © 2026 TARRADE Marc
             </div>
             <div class="social-media">
                 <a href="" class="link"> 
@@ -58,8 +58,14 @@
         gap: 1rem;
         padding-top: 1rem;
     }
+    .social-media a {
+        transition: all 0.2s ease;
+    }
+    .social-media a:hover {
+        transform: scale(1.1);
+    }
     .link {
-        text-decoration: none;
+        text-decoration: underline;
         color: var(--text);
     }
     .link img {
@@ -82,18 +88,21 @@
     }
     .webite-plan p, .contact-info p {
         font-size: 1.2rem;
-        color: var(--text);
+        color: var(--primary-color);
         margin-bottom: 0.5rem;
     }
     .webite-plan hr, .contact-info hr {
         width: 100%;
-        height: 1px;
-        background-color: var(--text);
+        border: 1px solid var(--primary-color);
         margin-bottom: 0.5rem;
     }
     .webite-plan .link, .contact-info a {
-        color: var(--text);
-        text-decoration: none;
+        color: var(--primary-color);
+        text-decoration: underline;
         margin-bottom: 0.5rem;
+        transition: color 0.3s ease;
+    }
+    .webite-plan .link:hover, .contact-info a:hover {
+        color: #FFF
     }
 </style>
