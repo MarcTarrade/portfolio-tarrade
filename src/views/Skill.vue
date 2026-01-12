@@ -1,17 +1,24 @@
 <script>
 import CalendarIcon from '@/components/icons/CalendarIcon.vue';
 import Modal from '@/components/Modal.vue';
+import { onMounted } from 'vue';
+import { useRoute } from 'vue-router';
 
 export default {
     components: {
         CalendarIcon,
         Modal
     },
+    setup() {
+        const route = useRoute();
+        return { route };
+    },
     data() {
         return {
             openModalIndex: null,
             skills: [
             {
+                slug: 'angular',
                 name: "Angular & Typescript",
                 image: "Angular_logo.svg.png",
                 level: "Avancé",
@@ -42,6 +49,7 @@ export default {
                 }
             },
             {
+                slug: 'nodejs',
                 name: "Node.js",
                 image: "nodejs_logo.svg",
                 level: "Avancé",
@@ -72,6 +80,7 @@ export default {
                 }
             },
             {
+                slug: 'docker',
                 name: "Docker",
                 image: "docker_logo.png",
                 level: "Avancé",
@@ -97,6 +106,7 @@ export default {
                 }
             },
             {
+                slug: 'kubernetes',
                 name: "Kubernetes",
                 image: "k8s_logo.png",
                 level: "Intermédiaire",
@@ -122,6 +132,7 @@ export default {
                 }
             },
             {
+                slug: 'vuejs',
                 name: "Vue.js",
                 image: "Logo-Vuejs.png",
                 level: "Intermédiaire",
@@ -147,6 +158,7 @@ export default {
                 }
             },
             {
+                slug: 'php',
                 name: "PHP",
                 image: "php-logo.png",
                 level: "Débutant",
@@ -172,6 +184,7 @@ export default {
                 }
             },
             {
+                slug: 'autonomie',
                 name: "Autonomie",
                 image: "autonomie.png",
                 level: "Intermédiaire",
@@ -198,6 +211,7 @@ export default {
                 }
             },
             {
+                slug: 'autoformation',
                 name: "Capacité d'auto-formation",
                 image: "autoformation.png",
                 level: "Avancé",
@@ -224,6 +238,7 @@ export default {
                 }
             },
             {
+                slug: 'communication',
                 name: "Communication",
                 image: "communication.png",
                 level: "Intermédiaire",
@@ -250,6 +265,7 @@ export default {
                 }
             },
             {
+                slug: 'relation-client',
                 name: "Relation client",
                 image: "relation-client.png",
                 level: "Intermédiaire",
@@ -274,6 +290,15 @@ export default {
     },
     mounted() {
         window.addEventListener('keydown', this.handleKeydown);
+
+        // Check for query parameter and open the corresponding modal
+        const skillSlug = this.route.query.skill;
+        if (skillSlug) {
+            const skillIndex = this.skills.findIndex(skill => skill.slug === skillSlug);
+            if (skillIndex !== -1) {
+                this.openModalIndex = skillIndex;
+            }
+        }
     },
     beforeUnmount() {
         window.removeEventListener('keydown', this.handleKeydown);
@@ -345,7 +370,7 @@ export default {
                 <h2>Compétences non techniques</h2>
                 <div class="skill-list">
                     <template v-for="(skill, idx) in skills.filter(s => s.type === 'soft')" :key="idx">
-                        <div class="skill-item" @click="openModalIndex = idx">
+                        <div class="skill-item" @click="openModalIndex = idx+6">
                             <div class="top-container">
                                 <img :src="skill.image" :alt="skill.name" class="skill-image"/> 
                                 <h2 class="skill-name">{{ skill.name }}</h2>
@@ -358,7 +383,7 @@ export default {
                                 </div>
                             </div>
                         </div>
-                        <Modal :visible="openModalIndex == idx" @close="openModalIndex = null">
+                        <Modal :visible="openModalIndex == idx+6" @close="openModalIndex = null">
                             <h2 class="modal-skill-title">{{ skill.name }}</h2>
                             <h3 class="modal-sub-title">Ma définition:</h3>
                             <p class="modal-text">{{ skill.definition }}</p>

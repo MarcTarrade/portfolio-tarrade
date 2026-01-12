@@ -1,6 +1,8 @@
 <script>
 import CalendarIcon from '@/components/icons/CalendarIcon.vue';
 import Modal from '@/components/Modal.vue';
+import { onMounted, watch } from 'vue';
+import { useRoute } from 'vue-router';
 
 export default {
     components: {
@@ -12,6 +14,7 @@ export default {
             openModalIndex: null,
             projects: [
             {
+                slug: "cloud-active-defense",
                 title: "Cloud Active Defense",
                 image: "SunDEW_logo.png",
                 date: "2024-2026",
@@ -68,6 +71,7 @@ export default {
                 
             },
             {
+                slug: "portfolio",
                 title: "Portfolio",
                 image: "portfolio_screen.jpg",
                 date: "2025",
@@ -99,6 +103,7 @@ export default {
                 
             },
             {
+                slug: "datahub",
                 title: "DataHub",
                 image: "ciffreobona_logo.png",
                 date: "2021-2022",
@@ -144,6 +149,7 @@ export default {
 
             },
             {
+                slug: "auribeau-judo",
                 title: "Auribeau Judo",
                 image: "logo_aurib.jpg",
                 date: "2020",
@@ -174,8 +180,26 @@ export default {
             }]
         }
     },
+    setup() {
+        const route = useRoute();
+        return { route };
+    },
     mounted() {
         window.addEventListener('keydown', this.handleKeydown);
+
+        // Watch for changes in the route query to handle the project slug
+        watch(
+            () => this.route.query.project,
+            (projectSlug) => {
+                if (projectSlug) {
+                    const projectIndex = this.projects.findIndex(project => project.slug === projectSlug);
+                    if (projectIndex !== -1) {
+                        this.openModalIndex = projectIndex;
+                    }
+                }
+            },
+            { immediate: true } // Run immediately on mount
+        );
     },
     beforeUnmount() {
         window.removeEventListener('keydown', this.handleKeydown);

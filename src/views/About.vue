@@ -40,37 +40,37 @@ export default {
                         {
                             name: "NodeJS",
                             image: "Node.js_logo_vert.png",
-                            link: "/skills?skill=NodeJS"
+                            link: "/skills?skill=nodejs"
                         },
                         {
                             name: "Angular",
                             image: "Angular_logo.svg.png",
-                            link: "/skills?skill=Angular"
+                            link: "/skills?skill=angular"
                         },
                         {
                             name: "Docker",
                             image: "docker_logo.png",
-                            link: "/skills?skill=Docker"
+                            link: "/skills?skill=docker"
                         },
                         {
                             name: "Kubernetes",
                             image: "k8s_logo.png",
-                            link: "/skills?skill=Kubernetes"
+                            link: "/skills?skill=kubernetes"
                         },
                         {
                             name: "Communication",
                             image: "communication.png",
-                            link: "/skills?skill=Communication"
+                            link: "/skills?skill=communication"
                         },
                         {
                             name: "Capacité d'autoformation",
                             image: "autoformation.png",
-                            link: "/skills?skill=Autoformation"
+                            link: "/skills?skill=auto-formation"
                         },
                         {
                             name: "Autonomie",
                             image: "autonomie.png",
-                            link: "/skills?skill=Autonomie"
+                            link: "/skills?skill=autonomie"
                         }
                     ],
                 },
@@ -85,22 +85,22 @@ export default {
                         {
                             name: "Angular",
                             image: "Angular_logo.svg.png",
-                            link: "/skills?skill=Angular"
+                            link: "/skills?skill=angular"
                         },
                         {
                             name: "Docker",
                             image: "docker_logo.png",
-                            link: "/skills?skill=Docker"
+                            link: "/skills?skill=docker"
                         },
                         {
                             name: "Kubernetes",
                             image: "k8s_logo.png",
-                            link: "/skills?skill=Kubernetes"
+                            link: "/skills?skill=kubernetes"
                         },
                         {
                             name: "Communication",
                             image: "communication.png",
-                            link: "/skills?skill=Communication"
+                            link: "/skills?skill=communication"
                         },
                     ]
                 },
@@ -129,27 +129,27 @@ export default {
                         {
                             name: "Angular",
                             image: "Angular_logo.svg.png",
-                            link: "/skills?skill=Angular"
+                            link: "/skills?skill=angular"
                         },
                         {
                             name: "NodeJS",
                             image: "Node.js_logo_vert.png",
-                            link: "/skills?skill=NodeJS"
+                            link: "/skills?skill=nodejs"
                         },
                         {
                             name: "Communication",
                             image: "communication.png",
-                            link: "/skills?skill=Communication"
+                            link: "/skills?skill=communication"
                         },
                         {
                             name: "Capacité d'autoformation",
                             image: "autoformation.png",
-                            link: "/skills?skill=Autoformation"
+                            link: "/skills?skill=auto-formation"
                         },
                         {
                             name: "Relation client",
                             image: "relation-client.png",
-                            link: "/skills?skill=RelationClient"
+                            link: "/skills?skill=relation-client"
                         }
                     ]
                 },
@@ -170,12 +170,12 @@ export default {
                         {
                             name: "Docker",
                             image: "docker_logo.png",
-                            link: "/skills?skill=Docker"
+                            link: "/skills?skill=docker"
                         },
                         {
                             name: "Kubernetes",
                             image: "k8s_logo.png",
-                            link: "/skills?skill=Kubernetes"
+                            link: "/skills?skill=kubernetes"
                         }
                     ]
                 },
@@ -190,17 +190,17 @@ export default {
                         {
                             name: "NodeJS",
                             image: "Node.js_logo_vert.png",
-                            link: "/skills?skill=NodeJS"
+                            link: "/skills?skill=nodejs"
                         },
                         {
                             name: "Communication",
                             image: "communication.png",
-                            link: "/skills?skill=Communication"
+                            link: "/skills?skill=communication"
                         },
                         {
                             name: "Docker",
                             image: "docker_logo.png",
-                            link: "/skills?skill=Docker"
+                            link: "/skills?skill=docker"
                         }
                     ]
                 },
@@ -235,7 +235,7 @@ export default {
                         {
                             name: "NodeJS",
                             image: "Node.js_logo_vert.png",
-                            link: "/skills?skill=NodeJS"
+                            link: "/skills?skill=nodejs"
                         }
                     ]
                 },
@@ -250,17 +250,17 @@ export default {
                         {
                             name: "PHP",
                             image: "php-logo.png",
-                            link: "/skills?skill=PHP"
+                            link: "/skills?skill=php"
                         },
                         {
                             name: "NodeJS",
                             image: "Node.js_logo_vert.png",
-                            link: "/skills?skill=NodeJS"
+                            link: "/skills?skill=nodejs"
                         },
                         {
                             name: "Communication",
                             image: "communication.png",
-                            link: "/skills?skill=Communication"
+                            link: "/skills?skill=communication"
                         }
                     ]
                 }
