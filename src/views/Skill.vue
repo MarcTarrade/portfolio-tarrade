@@ -15,6 +15,7 @@ export default {
                 name: "Angular & Typescript",
                 image: "Angular_logo.svg.png",
                 level: "Avancé",
+                type: 'technical',
                 percentage: 70,
                 definition: "Angular est un framework front-end moderne, basé sur TypeScript, permettant de développer des applications web dynamiques et modulaires. Dans un contexte professionnel, maîtriser Angular et TypeScript signifie créer des interfaces performantes, maintenables et sécurisées, tout en facilitant la collaboration au sein d’équipes de développement.Actuellement, Angular et TypeScript sont des compétences très recherchées pour garantir performance, sécurité et évolutivité des projets front-end",
                 projects: [
@@ -44,6 +45,7 @@ export default {
                 name: "Node.js",
                 image: "nodejs_logo.svg",
                 level: "Avancé",
+                type: 'technical',
                 percentage: 80,
                 definition: "Node.js est un environnement d’exécution JavaScript côté serveur. Il permet de développer des applications performantes et scalables, notamment des API et des services web, en utilisant un modèle asynchrone et événementiel. Dans un contexte professionnel, Node.js est largement utilisé pour concevoir des architectures modernes, efficaces et adaptées aux besoins des applications web actuelles.",
                 projects: [
@@ -73,6 +75,7 @@ export default {
                 name: "Docker",
                 image: "docker_logo.png",
                 level: "Avancé",
+                type: 'technical',
                 percentage: 70,
                 definition: "Docker est une plateforme de conteneurisation qui permet de créer, déployer et exécuter des applications de manière isolée et reproductible. En encapsulant une application avec ses dépendances dans des conteneurs légers, Docker garantit un comportement cohérent entre les environnements de développement, de test et de production. Dans un contexte professionnel, Docker facilite le déploiement, la scalabilité et la maintenance des applications",
                 projects: [
@@ -97,6 +100,7 @@ export default {
                 name: "Kubernetes",
                 image: "k8s_logo.png",
                 level: "Intermédiaire",
+                type: 'technical',
                 percentage: 60,
                 definition: "Kubernetes est une plateforme open source d’orchestration de conteneurs qui permet de déployer, gérer et faire évoluer des applications conteneurisées de manière automatisée. Elle facilite la gestion de la scalabilité, de la haute disponibilité et de la résilience des applications, tout en optimisant l’utilisation des ressources. Dans un contexte professionnel, Kubernetes est un outil clé pour exploiter pleinement des architectures cloud modernes et des environnements de production complexes.",
                 projects: [
@@ -121,6 +125,7 @@ export default {
                 name: "Vue.js",
                 image: "Logo-Vuejs.png",
                 level: "Intermédiaire",
+                type: "technical",
                 percentage: 50,
                 definition: "Vue.js est un framework JavaScript progressif dédié au développement d’interfaces utilisateur. Il permet de créer des applications web réactives, modulaires et performantes, tout en restant simple à prendre en main. Dans un contexte professionnel, Vue.js est apprécié pour sa flexibilité et sa facilité d’intégration, aussi bien sur des projets existants que sur des applications modernes de plus grande envergure",
                 projects: [
@@ -145,6 +150,7 @@ export default {
                 name: "PHP",
                 image: "php-logo.png",
                 level: "Débutant",
+                type: 'technical',
                 percentage: 30,
                 definition: "PHP est un langage de programmation côté serveur principalement utilisé pour le développement d’applications web dynamiques. Il permet de traiter des données, d’interagir avec des bases de données et de générer du contenu HTML de manière efficace. Dans un contexte professionnel, PHP reste largement utilisé pour concevoir des applications web robustes, maintenables et intégrées à de nombreux écosystèmes existants",
                 projects: [
@@ -169,6 +175,7 @@ export default {
                 name: "Autonomie",
                 image: "autonomie.png",
                 level: "Intermédiaire",
+                type: 'soft',
                 percentage: 60,
                 definition: "L’autonomie pour un développeur est la capacité à gérer ses tâches, à prendre des initiatives et à avancer de manière indépendante tout en respectant les objectifs et les délais d’un projet. Elle implique de savoir organiser son travail, résoudre des problèmes sans supervision constante et prendre des décisions éclairées",
                 projects: [
@@ -194,6 +201,7 @@ export default {
                 name: "Capacité d'auto-formation",
                 image: "autoformation.png",
                 level: "Avancé",
+                type: 'soft',
                 percentage: 70,
                 definition: "La capacité d’autoformation est une compétence clé pour un développeur, lui permettant d’apprendre de manière autonome et continue face à l’évolution rapide des technologies. Elle consiste à savoir identifier ses besoins, rechercher des ressources pertinentes et expérimenter afin d’acquérir de nouvelles compétences ou d’approfondir des connaissances existantes",
                 projects: [
@@ -219,6 +227,7 @@ export default {
                 name: "Communication",
                 image: "communication.png",
                 level: "Intermédiaire",
+                type: 'soft',
                 percentage: 40,
                 definition: "Lors de mon alternance chez SAP, j’ai développé mon projet en autonomie, avec l’accompagnement de mon tuteur qui me fournissait des orientations de conception. Nous avons ainsi beaucoup communiqué sur l’avancement du projet. J’ai également présenté le projet à des profils techniques et non techniques, et rédigé une documentation détaillée destinée aux futurs développeurs en charge du projet",
                 projects: [
@@ -244,6 +253,7 @@ export default {
                 name: "Relation client",
                 image: "relation-client.png",
                 level: "Intermédiaire",
+                type: 'soft',
                 percentage: 50,
                 definition: "La relation client désigne l'ensemble des interactions et des échanges entre une entreprise et ses clients, visant à établir et maintenir une relation de confiance et de satisfaction mutuelle",
                 projects: [
@@ -282,69 +292,132 @@ export default {
     <div class="menu-margin"></div>
     <div class="wrapper">
         <h1 class="view-title">Mes compétences</h1>
-        <div class="skill-list">
-            <template v-for="(skill, idx) in skills" :key="idx">
-                <div class="skill-item" @click="openModalIndex = idx">
-                    <div class="top-container">
-                        <img :src="skill.image" :alt="skill.name" class="skill-image"/> 
-                        <h2 class="skill-name">{{ skill.name }}</h2>
-                    </div>
-                    <div class="bottom-container">
-                        <p class="skill-level">{{ skill.level }}</p>
-                        <div class="skill-percentage-container">
-                            <div :style="{width: skill.percentage + '%'}" class="my-percentage"></div>
-                            <div class="rest-percentage"></div>
+        <div class="skill-list-container">
+            <div class="technical">
+                <h2>Compétences techniques</h2>
+                <div class="skill-list">
+                    <template v-for="(skill, idx) in skills.filter(s => s.type === 'technical')" :key="idx">
+                        <div class="skill-item" @click="openModalIndex = idx">
+                            <div class="top-container">
+                                <img :src="skill.image" :alt="skill.name" class="skill-image"/> 
+                                <h2 class="skill-name">{{ skill.name }}</h2>
+                            </div>
+                            <div class="bottom-container">
+                                <p class="skill-level">{{ skill.level }}</p>
+                                <div class="skill-percentage-container">
+                                    <div :style="{width: skill.percentage + '%'}" class="my-percentage"></div>
+                                    <div class="rest-percentage"></div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <Modal :visible="openModalIndex == idx" @close="openModalIndex = null">
-                    <h2 class="modal-skill-title">{{ skill.name }}</h2>
-                    <h3 class="modal-sub-title">Ma définition:</h3>
-                    <p class="modal-text">{{ skill.definition }}</p>
-                    <div class="project-container">
-                        <h3 class="modal-sub-title">Mes éléments de preuve:</h3>
-                        <div class="project" v-for="(project, pIdx) in skill.projects" :key="pIdx">
-                            <router-link class="project-link" :to="project.link">
-                                <b>{{ project.title }}</b>
-                            </router-link>
-                            <p class="modal-text">{{ project.description }}</p>
-                        </div>
-                    </div>
-                    <h3 class="modal-sub-title">Mon auto-critique:</h3>
-                    <p class="modal-text">{{ skill.autocritique.description }}</p>
-                    <h4 class="modal-third-title">Place dans mon profil</h4>
-                    <p class="modal-text">{{ skill.autocritique.my_profile }}</p>
-                    <h4 class="modal-third-title">Vitesse d'acquisition</h4>
-                    <p class="modal-text">{{ skill.autocritique.speed }}</p>
-                    <h4 class="modal-third-title">Mon recul sur cette compétence</h4>
-                    <p class="modal-text">{{ skill.autocritique.step_back }}</p>
-                    <template v-if="skill.evolution">
-                        <h3 class="modal-sub-title">Mon évolution dans cette compétence:</h3>
-                        <p class="modal-text">{{ skill.evolution.description }}</p>
-                        <h4 class="modal-third-title">Formation en cours / à venir</h4>
-                        <p class="modal-text">{{ skill.evolution.next_steps }}</p>
+                        <Modal :visible="openModalIndex == idx" @close="openModalIndex = null">
+                            <h2 class="modal-skill-title">{{ skill.name }}</h2>
+                            <h3 class="modal-sub-title">Ma définition:</h3>
+                            <p class="modal-text">{{ skill.definition }}</p>
+                            <div class="project-container">
+                                <h3 class="modal-sub-title">Mes éléments de preuve:</h3>
+                                <div class="project" v-for="(project, pIdx) in skill.projects" :key="pIdx">
+                                    <router-link class="project-link" :to="project.link">
+                                        <b>{{ project.title }}</b>
+                                    </router-link>
+                                    <p class="modal-text">{{ project.description }}</p>
+                                </div>
+                            </div>
+                            <h3 class="modal-sub-title">Mon auto-critique:</h3>
+                            <p class="modal-text">{{ skill.autocritique.description }}</p>
+                            <h4 class="modal-third-title">Place dans mon profil</h4>
+                            <p class="modal-text">{{ skill.autocritique.my_profile }}</p>
+                            <h4 class="modal-third-title">Vitesse d'acquisition</h4>
+                            <p class="modal-text">{{ skill.autocritique.speed }}</p>
+                            <h4 class="modal-third-title">Mon recul sur cette compétence</h4>
+                            <p class="modal-text">{{ skill.autocritique.step_back }}</p>
+                            <template v-if="skill.evolution">
+                                <h3 class="modal-sub-title">Mon évolution dans cette compétence:</h3>
+                                <p class="modal-text">{{ skill.evolution.description }}</p>
+                                <h4 class="modal-third-title">Formation en cours / à venir</h4>
+                                <p class="modal-text">{{ skill.evolution.next_steps }}</p>
+                            </template>
+                        </Modal>
                     </template>
-                </Modal>
-            </template>
+                </div>
+            </div>
+            <div class="soft">
+                <h2>Compétences non techniques</h2>
+                <div class="skill-list">
+                    <template v-for="(skill, idx) in skills.filter(s => s.type === 'soft')" :key="idx">
+                        <div class="skill-item" @click="openModalIndex = idx">
+                            <div class="top-container">
+                                <img :src="skill.image" :alt="skill.name" class="skill-image"/> 
+                                <h2 class="skill-name">{{ skill.name }}</h2>
+                            </div>
+                            <div class="bottom-container">
+                                <p class="skill-level">{{ skill.level }}</p>
+                                <div class="skill-percentage-container">
+                                    <div :style="{width: skill.percentage + '%'}" class="my-percentage"></div>
+                                    <div class="rest-percentage"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <Modal :visible="openModalIndex == idx" @close="openModalIndex = null">
+                            <h2 class="modal-skill-title">{{ skill.name }}</h2>
+                            <h3 class="modal-sub-title">Ma définition:</h3>
+                            <p class="modal-text">{{ skill.definition }}</p>
+                            <div class="project-container">
+                                <h3 class="modal-sub-title">Mes éléments de preuve:</h3>
+                                <div class="project" v-for="(project, pIdx) in skill.projects" :key="pIdx">
+                                    <router-link class="project-link" :to="project.link">
+                                        <b>{{ project.title }}</b>
+                                    </router-link>
+                                    <p class="modal-text">{{ project.description }}</p>
+                                </div>
+                            </div>
+                            <h3 class="modal-sub-title">Mon auto-critique:</h3>
+                            <p class="modal-text">{{ skill.autocritique.description }}</p>
+                            <h4 class="modal-third-title">Place dans mon profil</h4>
+                            <p class="modal-text">{{ skill.autocritique.my_profile }}</p>
+                            <h4 class="modal-third-title">Vitesse d'acquisition</h4>
+                            <p class="modal-text">{{ skill.autocritique.speed }}</p>
+                            <h4 class="modal-third-title">Mon recul sur cette compétence</h4>
+                            <p class="modal-text">{{ skill.autocritique.step_back }}</p>
+                            <template v-if="skill.evolution">
+                                <h3 class="modal-sub-title">Mon évolution dans cette compétence:</h3>
+                                <p class="modal-text">{{ skill.evolution.description }}</p>
+                                <h4 class="modal-third-title">Formation en cours / à venir</h4>
+                                <p class="modal-text">{{ skill.evolution.next_steps }}</p>
+                            </template>
+                        </Modal>
+                    </template>
+                </div>
+            </div>
         </div>
     </div>
 </template>
 
 <style scoped>
+    .skill-list-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+        margin-top: 3rem;
+    }
+    .technical, .soft {
+        width: 48%;
+        text-align: center;
+    }
     .skill-list {
         display: flex;
         flex-direction: row;
         margin: 0 4%;
-        margin-bottom: 5rem;
         width: 92%;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .skill-item {
         border: 1px solid #ccc;
         padding: 0.5rem 1rem;
         border-radius: 8px;
-        width: 18%;
+        width: 25%;
         margin: 1rem;
         height: 35vh;
         display: flex;
