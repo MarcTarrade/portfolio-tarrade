@@ -318,10 +318,12 @@ export default {
                     <p class="modal-text">{{ skill.autocritique.speed }}</p>
                     <h4 class="modal-third-title">Mon recul sur cette compétence</h4>
                     <p class="modal-text">{{ skill.autocritique.step_back }}</p>
-                    <h3 class="modal-sub-title">Mon évolution dans cette compétence:</h3>
-                    <p class="modal-text">{{ skill.evolution.description }}</p>
-                    <h4 class="modal-third-title">Formation en cours / à venir</h4>
-                    <p class="modal-text">{{ skill.evolution.next_steps }}</p>
+                    <template v-if="skill.evolution">
+                        <h3 class="modal-sub-title">Mon évolution dans cette compétence:</h3>
+                        <p class="modal-text">{{ skill.evolution.description }}</p>
+                        <h4 class="modal-third-title">Formation en cours / à venir</h4>
+                        <p class="modal-text">{{ skill.evolution.next_steps }}</p>
+                    </template>
                 </Modal>
             </template>
         </div>
