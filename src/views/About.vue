@@ -1,10 +1,8 @@
 <script>
-import AboutShort from '@/components/About-short.vue';
 import Modal from '@/components/Modal.vue';
 import CalendarIcon from '@/components/icons/CalendarIcon.vue';
 export default {
     components: {
-        AboutShort,
         Modal,
         CalendarIcon
     },
@@ -377,6 +375,11 @@ export default {
         width: 80%;
         position: relative;
         cursor: pointer;
+        transition: transform 0.3s 0.1s;
+        background-color: #FFF;
+    }
+    .timeline-item:hover {
+        transform: scale(1.1);
     }
     .right .timeline-content{
         right: -75px;
