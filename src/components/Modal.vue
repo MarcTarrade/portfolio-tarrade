@@ -51,6 +51,7 @@ export default {
     max-height: 80vh;
     position: relative;
     overflow: auto;
+    text-align: left;
 }
 
 .modal-close {
