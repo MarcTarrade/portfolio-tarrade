@@ -4,6 +4,7 @@ import PersonIcon from './icons/PersonIcon.vue';
 import CompassIcon from './icons/CompassIcon.vue';
 import CodeIcon from './icons/CodeIcon.vue';
 import MailIcon from './icons/MailIcon.vue';
+import AboutIcon from './icons/AboutIcon.vue';
 
     export default {
         components: {
@@ -11,7 +12,8 @@ import MailIcon from './icons/MailIcon.vue';
             PersonIcon,
             CompassIcon,
             CodeIcon,
-            MailIcon
+            MailIcon,
+            AboutIcon
         }
     };
 </script>
@@ -32,7 +34,7 @@ import MailIcon from './icons/MailIcon.vue';
                     <p class="menu-link">Présentation</p>
                 </router-link>
                 <router-link class="menu-item" to="/about">
-                    <PersonIcon class="menu-icon"/>
+                    <AboutIcon class="menu-icon"/>
                     <p class="menu-link">À propos</p>
                 </router-link>
                 <router-link class="menu-item" to="/projects">
