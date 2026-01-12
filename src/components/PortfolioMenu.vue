@@ -29,11 +29,11 @@ import MailIcon from './icons/MailIcon.vue';
                 </router-link>
                 <router-link class="menu-item" to="/presentation">
                     <PersonIcon class="menu-icon"/>
-                    <p class="menu-link">Presentation</p>
+                    <p class="menu-link">Présentation</p>
                 </router-link>
                 <router-link class="menu-item" to="/about">
                     <PersonIcon class="menu-icon"/>
-                    <p class="menu-link">A propos</p>
+                    <p class="menu-link">À propos</p>
                 </router-link>
                 <router-link class="menu-item" to="/projects">
                     <CompassIcon class="menu-icon"/>

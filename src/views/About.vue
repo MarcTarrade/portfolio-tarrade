@@ -318,7 +318,7 @@ export default {
                                 </div>
                             </div>
                             <div class="missions-container">
-                                <h3 class="missions">Details des missions:</h3>
+                                <h3 class="missions">Détails des missions:</h3>
                                 <ul>
                                     <li v-for="(detail, dIdx) in item.details" :key="dIdx">{{ detail }}</li>
                                 </ul>
@@ -343,7 +343,7 @@ export default {
                         </div>
                         <div class="formation" v-else-if="item.type == 'formation'">
                             <div class="modal-content">
-                                <h3 class="description">A propos:</h3>
+                                <h3 class="description">À propos:</h3>
                                 <p class="formation-description">{{ item.description }}</p>
                             </div>
                             <div class="skill-container" v-if="item.skills && item.skills.length">
