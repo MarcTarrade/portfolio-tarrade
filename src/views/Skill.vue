@@ -444,7 +444,7 @@ export default {
         border: 1px solid #ccc;
         padding: 0.5rem 1rem;
         border-radius: 8px;
-        width: 10rem;
+        width: 14rem;
         margin: 1rem;
         height: 20rem;
         display: flex;
