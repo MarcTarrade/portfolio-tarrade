@@ -425,9 +425,9 @@ export default {
         display: flex;
         justify-content: space-between;
         margin-bottom: 4rem;
-        margin-top: 1rem;
     }
     .technical, .soft {
+        margin-top: 1rem;
         width: 48%;
         text-align: center;
     }
@@ -444,9 +444,9 @@ export default {
         border: 1px solid #ccc;
         padding: 0.5rem 1rem;
         border-radius: 8px;
-        width: 25%;
+        width: 10rem;
         margin: 1rem;
-        height: 35vh;
+        height: 20rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -527,5 +527,46 @@ export default {
         margin-top: 1.4rem;
         margin-bottom: 0.5rem;
         color: var(--tertiary-color);
+    }
+
+    @media screen and (max-width: 1900px){
+        .skill-item {
+            height: 15rem;
+        }
+        .skill-name {
+            font-size: 1.2rem;
+        }
+        .skill-image {
+            height: 10vh;
+        }
+    }
+    @media screen and (max-width: 900px) {
+        .skill-list-container {
+            flex-direction: column;
+            align-items: center;
+        }
+        .technical, .soft {
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 425px) {
+        .skill-item {
+            width: 7rem;
+            height: 11rem;
+        }
+        .skill-name {
+            hyphens: auto;
+            font-size: 1rem;
+        }
+        .skill-image {
+            height: 8vh;
+        }
+        .skill-level {
+            font-size: 0.8rem;
+            margin-bottom: 0.6rem;
+        }
+        .skill-percentage-container {
+            margin-bottom: 0.6rem;
+        }
     }
 </style>

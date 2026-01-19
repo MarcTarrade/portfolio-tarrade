@@ -36,7 +36,6 @@
 <style scoped>
     .footer {
         width: 100%;
-        height: 20vh;
         background-color: var(--tertiary-color);
         display: flex;
         justify-content: space-between;
@@ -104,5 +103,25 @@
     }
     .webite-plan .link:hover, .contact-info a:hover {
         color: #FFF
+    }
+
+    @media screen and (max-width: 768px) {
+        .right {
+            flex-direction: column;
+            align-items: center;
+            margin-right: 0;
+        }
+        .webite-plan, .contact-info {
+            align-items: center;
+            text-align: center;
+        }
+    }
+    @media screen and (max-width: 425px) {
+        .footer {
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            gap: 2rem;
+        }
     }
 </style>

@@ -107,7 +107,7 @@ export default {
         background-color: var(--secondary-color);
         color: #FFF;
         border: none;
-        padding: 0.8rem 3rem;
+        text-align: center;
         margin: 1rem;
         font-size: 1.2rem;
         cursor: pointer;
@@ -116,5 +116,40 @@ export default {
     }
     .submit-button:hover {
         background-color: var(--primary-color);
+    }
+
+    @media screen and (max-width: 1250px) {
+        .contact-container {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        .contact-info {
+            flex-direction: row;
+            margin-top: 2rem;
+        }
+        .tel, .email {
+            margin: 1rem 2rem;
+            width: 15rem;
+        }
+        .contact-form {
+            width: 60%;
+        }
+    }
+    @media screen and (max-width: 968px) {
+        .contact-form {
+            width: 90%;
+        }
+    }
+    @media screen and (max-width: 620px) {
+        .contact-container {
+            padding: 0 5%;
+        }
+        .contact-info {
+            flex-direction: column;
+        }
+        .contact-form {
+            width: 100%;
+            padding: 2rem 5%;
+        }
     }
 </style>

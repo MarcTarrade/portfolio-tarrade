@@ -6,8 +6,8 @@
             <p class="abstract-text">Passionné par les technologies web et la cybersécurité, je poursuis actuellement un Master en ingénierie logicielle à l’ISCOD en alternance chez SAP, où je participe à des projets liés à la cyber sécurité. Fort d’expériences variées en développement fullstack, en IA et en sécurité applicative, j’aime concevoir des solutions innovantes, performantes et sécurisées. Curieux, rigoureux et orienté résultats, je cherche à allier excellence technique et impact concret dans mes projets.</p>
         </div>
         <div class="call-to-action">
-            <button class="project">Voir mes projets</button>
-            <button class="skills">Voir mes compétences</button>
+            <router-link to="/projects" class="project">Voir mes projets</router-link>
+            <router-link to="/skills" class="skills">Voir mes compétences</router-link>
         </div>
     </div>
 </template>
@@ -31,11 +31,11 @@
     .abstract-container {
         background-color: var(--background-variant);
         width: 100%;
-        height: 40vh;
+        min-height: 40vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0 20%;
+        padding: 2rem 20%;
     }
     .abstract-text {
         font-size: 1.5rem;
@@ -61,8 +61,51 @@
         cursor: pointer;
         border-radius: 5px;
         transition: background-color 0.3s ease;
+        text-decoration: none;
+        text-align: center;
+        line-height: 2.5em;
     }
     .project:hover, .skills:hover {
         background-color: var(--primary-color);
+    }
+
+    @media screen and (max-width: 1750px) {
+        .call-to-action {
+            padding: 0 20%;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .call-to-action {
+            padding: 0 10%;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .call-to-action {
+            flex-direction: column;
+            height: auto;
+        }
+    }
+    @media screen and (max-width: 425px) {
+        .project, .skills {
+            font-size: 1rem;
+            height: 4rem;
+            line-height: 2em;
+        }
+        .abstract-text {
+            font-size: 1.2rem;
+        }
+        .name-title {
+            font-size: 3rem;
+        }
+    }
+    @media screen and (max-width: 320px) {
+        .project, .skills {
+            font-size: 0.6rem;
+            height: 3rem;
+            line-height: 2em;
+        }
+        .abstract-text {
+            font-size: 1rem;
+        }
     }
 </style>

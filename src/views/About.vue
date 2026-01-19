@@ -367,7 +367,7 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 2vh;
+        margin-bottom: 4rem;
     }
     .timeline-item {
         display: flex;
@@ -504,5 +504,34 @@ export default {
     .modal-content .description {
         margin-bottom: 1rem;
         color: var(--secondary-color);
+    }
+
+    @media screen and (max-width: 580px){
+        .timeline-item img {
+            width: 100px;
+            height: 100px;
+        }
+        .right .timeline-content{
+            right: -50px;
+        }
+        .left .timeline-content {
+            left: -50px;
+        }
+        .left .timeline-content h2 {
+            text-align: end;
+        }
+        .timeline-content h2 {
+            font-size: 1rem;
+        }
+        .timeline-content span {
+            font-size: 0.8rem;
+        }
+        .project-date {
+            font-size: 0.7rem;
+        }
+        .project-date-container svg {
+            width: 20px;
+            height: 20px;
+        }
     }
 </style>

@@ -49,4 +49,13 @@ Sur le plan personnel, je cherche à renforcer mon expertise dans mon domaine to
     .end-margin {
         height: 5rem;
     }
+
+    @media screen and (max-width: 425px) {
+        .presentation-text {
+            font-size: 1rem;
+        }
+        .presentation-sub-title {
+            font-size: 1.2rem;
+        }
+    }
 </style>

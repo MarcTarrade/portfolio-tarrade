@@ -279,18 +279,21 @@ export default {
     .project-list {
         display: flex;
         flex-direction: row;
-        margin: 0 4%;
+        margin: 0 6%;
         margin-bottom: 5rem;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 
     .project-item {
         border: 1px solid #ccc;
         padding: 0.5rem 1rem;
         border-radius: 8px;
-        width: 20%;
+        width: 18rem;
         cursor: pointer;
-        margin: 0 1rem;
+        margin: 2rem 1rem;
         transition: all 0.3s ease;
+        min-height: 24rem;
     }
     .project-item:hover {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -393,5 +396,12 @@ export default {
     }
     .steps-container li {
         margin-bottom: 0.3rem;
+    }
+
+    @media screen and (max-width: 425px){
+        .project-item {
+            margin: 1rem 0;
+        }
+        
     }
 </style>
