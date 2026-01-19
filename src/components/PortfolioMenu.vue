@@ -63,7 +63,7 @@ import CloseIcon from './icons/CloseIcon.vue';
             </div>
             <div class="burger-container">
                 <MenuIcon class="burger-icon" @click="isBurgerMenuOpen = !isBurgerMenuOpen"/>
-                <div class="burger-menu" v-if="isBurgerMenuOpen">
+                <div class="burger-menu" :class="{ open: isBurgerMenuOpen }">
                     <router-link class="burger-menu-item" to="/" @click="isBurgerMenuOpen = false">
                         <HomeIcon class="menu-icon"/>
                         <p class="menu-link">Accueil</p>
@@ -203,7 +203,7 @@ import CloseIcon from './icons/CloseIcon.vue';
     .burger-menu {
         position: fixed;
         top: 0;
-        left: 0;
+        right: -100%;
         width: 100vw;
         height: 100vh;
         background-color: var(--tertiary-color);
@@ -213,12 +213,23 @@ import CloseIcon from './icons/CloseIcon.vue';
         padding: 1rem;
         z-index: 1001;
         justify-content: space-evenly;
+        transition: right 0.3s ease-in-out;
+    }
+    .burger-menu.open {
+        right: 0;
     }
     .burger-menu-item {
         display: flex;
         align-items: center;
         padding: 1rem 0;
         text-decoration: none;
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly below */
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .burger-menu.open .burger-menu-item {
+        opacity: 1;
+        transform: translateY(0); /* Move to original position */
     }
     .burger-menu-item .menu-icon {
         width: 42px;
@@ -240,7 +251,11 @@ import CloseIcon from './icons/CloseIcon.vue';
         height: 32px;
         top: 1.5rem;
         right: 1.5rem;
+        transition: transform 0.3s ease;
     }
+    .close-burger-menu:hover {
+    transform: rotate(90deg); /* Rotate on hover */
+}
 
     @media screen and (max-width: 1750px) {
         .menu-title-container {
@@ -353,5 +368,7 @@ import CloseIcon from './icons/CloseIcon.vue';
             height: 80px;
         }
     }
+
+
 
 </style>
