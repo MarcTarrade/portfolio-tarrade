@@ -1,5 +1,6 @@
 <script>
 import CalendarIcon from '@/components/icons/CalendarIcon.vue';
+import LinkIcon from '@/components/icons/LinkIcon.vue';
 import Modal from '@/components/Modal.vue';
 import { onMounted } from 'vue';
 import { useRoute } from 'vue-router';
@@ -7,7 +8,8 @@ import { useRoute } from 'vue-router';
 export default {
     components: {
         CalendarIcon,
-        Modal
+        Modal,
+        LinkIcon
     },
     setup() {
         const route = useRoute();
@@ -324,7 +326,7 @@ export default {
                     <template v-for="(skill, idx) in skills.filter(s => s.type === 'technical')" :key="idx">
                         <div class="skill-item" @click="openModalIndex = idx">
                             <div class="top-container">
-                                <img :src="skill.image" :alt="skill.name" class="skill-image"/> 
+                                <img :src="skill.image" :alt="skill.name + '-icon'" class="skill-image"/> 
                                 <h2 class="skill-name">{{ skill.name }}</h2>
                             </div>
                             <div class="bottom-container">
@@ -347,6 +349,12 @@ export default {
                                         <b>{{ project.title }}</b>
                                     </router-link>
                                     <p class="modal-text">{{ project.description }}</p>
+                                    <div class="project-link-container">
+                                        <router-link>
+                                            <LinkIcon/>
+                                            <span class="link-name">{{ project.title }}</span>
+                                        </router-link>
+                                    </div>
                                 </div>
                             </div>
                             <h3 class="modal-sub-title">Mon auto-critique:</h3>
@@ -373,7 +381,7 @@ export default {
                     <template v-for="(skill, idx) in skills.filter(s => s.type === 'soft')" :key="idx">
                         <div class="skill-item" @click="openModalIndex = idx+6">
                             <div class="top-container">
-                                <img :src="skill.image" :alt="skill.name" class="skill-image"/> 
+                                <img :src="skill.image" :alt="skill.name + '-icon'" class="skill-image"/>
                                 <h2 class="skill-name">{{ skill.name }}</h2>
                             </div>
                             <div class="bottom-container">
@@ -527,6 +535,25 @@ export default {
         margin-top: 1.4rem;
         margin-bottom: 0.5rem;
         color: var(--tertiary-color);
+    }
+    .project-link-container {
+        margin-top: 0.6rem;
+        margin-bottom: 0.8rem;
+        border: 1px solid var(--sub-text);
+        color: #000;
+        border-radius: 99px;
+        width: fit-content;
+        padding: 0.2rem 0.8rem;
+        transition: 0.3s ease;
+    }
+    .project-link-container a {
+        text-decoration: none;
+        color: currentColor;
+    }
+    .project-link-container:hover {
+        background-color: var(--tertiary-color);
+        cursor: pointer;
+        color: #FFF;
     }
 
     @media screen and (max-width: 1900px){

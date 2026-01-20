@@ -36,7 +36,6 @@ Sur le plan personnel, je cherche à renforcer mon expertise dans mon domaine to
         font-size: 1.2rem;
         line-height: 1.4;
         margin: 0 15%;
-        text-align: justify;
     }
 
     .presentation-sub-title {

@@ -31,7 +31,7 @@ import CloseIcon from './icons/CloseIcon.vue';
     <div class="menu-container">
         <header class="menu">
             <div class="menu-title-container">
-                <p class="menu-title">TARRADE Marc</p>
+                <h3 class="menu-title">TARRADE Marc</h3>
             </div>
             <nav class="menu-item-container" role="navigation">
                 <router-link class="menu-item" to="/">
@@ -66,29 +66,29 @@ import CloseIcon from './icons/CloseIcon.vue';
                 <div class="burger-menu" :class="{ open: isBurgerMenuOpen }">
                     <router-link class="burger-menu-item" to="/" @click="isBurgerMenuOpen = false">
                         <HomeIcon class="menu-icon"/>
-                        <p class="menu-link">Accueil</p>
+                        <span class="menu-link">Accueil</span>
                     </router-link>
                     <router-link class="burger-menu-item" to="/presentation" @click="isBurgerMenuOpen = false">
                         <PersonIcon class="menu-icon"/>
-                        <p class="menu-link">Présentation</p>
+                        <span class="menu-link">Présentation</span>
                     </router-link>
                     <router-link class="burger-menu-item" to="/about" @click="isBurgerMenuOpen = false">
                         <AboutIcon class="menu-icon"/>
-                        <p class="menu-link">À propos</p>
+                        <span class="menu-link">À propos</span>
                     </router-link>
                     <router-link class="burger-menu-item" to="/projects" @click="isBurgerMenuOpen = false">
                         <CompassIcon class="menu-icon"/>
-                        <p class="menu-link">Projets</p>
+                        <span class="menu-link">Projets</span>
                     </router-link>
                     <router-link class="burger-menu-item" to="/skills" @click="isBurgerMenuOpen = false">
                         <CodeIcon class="menu-icon"/>
-                        <p class="menu-link">Compétences</p>
+                        <span class="menu-link">Compétences</span>
                     </router-link>
                     <router-link class="burger-menu-item" to="/contact" @click="isBurgerMenuOpen = false">
                         <MailIcon class="menu-icon"/>
-                        <p class="menu-link">Contact</p>
+                        <span class="menu-link">Contact</span>
                     </router-link>
-                    <button class="close-burger-menu" @click="isBurgerMenuOpen = false">
+                    <button class="close-burger-menu" @click="isBurgerMenuOpen = false" title="closing burger menu">
                         <CloseIcon/>
                     </button>
                 </div>

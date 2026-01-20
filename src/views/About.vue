@@ -288,7 +288,7 @@ export default {
             <div class="timeline">
                 <template v-for="(item, idx) in timeline" :key="idx">
                     <div :class="['timeline-item', idx % 2 === 0 ? 'right' : 'left']" @click="openModalIndex = idx">
-                        <img :src="'/portfolio-tarrade/' + item.img" :alt="item.title">
+                        <img :src="'/portfolio-tarrade/' + item.img" :alt="item.img.split('.')[0]">
                         <div class="timeline-content">
                             <h2>{{ item.title }}</h2>
                             <span>{{ item.place }}</span>

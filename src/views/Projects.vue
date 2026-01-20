@@ -221,7 +221,7 @@ export default {
         <div class="project-list">
             <template v-for="(project, idx) in projects" :key="idx">
                 <div class="project-item"  @click="openModalIndex = idx">
-                    <img :src="project.image" :alt="project.title" class="project-image"/> 
+                    <img :src="project.image" :alt="project.title + '-project'" class="project-image"/> 
                     <h2 class="project-title">{{ project.title }}</h2>
                     <div class="project-date-container">
                         <CalendarIcon/>
@@ -230,7 +230,7 @@ export default {
                     <p class="project-description" v-html="project.shortDescription"></p>
                     <div class="skills-container">
                         <div v-for="skill in project.skills" class="skill-item">
-                            <img :src="skill.image" :alt="skill.name" class="skill-image" :title="skill.name"/>
+                            <img :src="skill.image" :alt="skill.name + '-icon'" class="skill-image" :title="skill.name"/>
                             <p class="skill-text">{{ skill.name }}</p>
                         </div>
                     </div>
@@ -361,7 +361,7 @@ export default {
         transition: 0.3s;
     }
     .skill-item-modal:hover {
-        background-color: var(--sub-text);
+        background-color: var(--tertiary-color);
         color: var(--text-on-primary);
     }
     .skill-image {

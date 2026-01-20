@@ -26,6 +26,7 @@
         transform: translateX(-50%);
         font-size: 4rem;
         color: #FFF;
+        background-color: rgb(0, 0, 0, 0.2);
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
     .abstract-container {
