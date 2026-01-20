@@ -18,9 +18,9 @@ export default {
                 title: "Cloud Active Defense",
                 image: "SunDEW_logo.png",
                 date: "2024-2026",
-                presentation: "Cloud Active Defense est une application de cybersécurité permettant de déployer des leurres au sein d’applications cloud clientes afin de les protéger. Ces leurres ont pour objectif de tromper les pirates informatiques qui tenteraient de compromettre l’application",
-                objectives: "Dans un contexte où la cybersécurité devient de plus en plus critique, Cloud Active Defense permet de protéger des applications existantes sans nécessiter de modification de leur code. L’objectif est de sécuriser ces applications grâce à des leurres qui simulent des vulnérabilités, afin de détecter les tentatives d’attaque, puis de bloquer les attaquants (blacklisting) et d’empêcher toute récidive",
-                challenges: "L’enjeu principal était de protéger des applications, principalement web, hébergées dans le cloud, tout en permettant aux utilisateurs de simplement configurer Cloud Active Defense sans modifier leur code existant. Le risque majeur était de ne pas compromettre la sécurité ou la stabilité de l’application protégée en ajoutant cette surcouche, et d’éviter l’introduction de nouvelles failles",
+                presentation: "Cloud Active Defense est une application de cybersécurité permettant de déployer des leurres au sein d’applications cloud clientes afin de les protéger. Ces leurres ont pour objectif de tromper les pirates informatiques qui tenteraient de compromettre l’application.",
+                objectives: "Dans un contexte où la cybersécurité devient de plus en plus critique, Cloud Active Defense permet de protéger des applications existantes sans nécessiter de modification de leur code. L’objectif est de sécuriser ces applications grâce à des leurres qui simulent des vulnérabilités, afin de détecter les tentatives d’attaque, puis de bloquer les attaquants (blacklist) et d’empêcher toute récidive.",
+                challenges: "L’enjeu principal était de protéger des applications, principalement web, hébergées dans le cloud, tout en permettant aux utilisateurs de configurer simplement Cloud Active Defense sans modifier leur code existant. Le risque majeur était de ne pas compromettre la sécurité ou la stabilité de l’application protégée en ajoutant cette surcouche, et d’éviter l’introduction de nouvelles failles.",
                 steps: [
                     "Optimisation du proxy d’injection de leurres",
                     "Ajout d’une pipeline permettant de récupérer les logs d’alerte lors d’une détection via un leurre",
@@ -28,9 +28,9 @@ export default {
                     "Développement de l’application permettant de configurer les leurres et de consulter les alertes",
                     "Conteneurisation des différents services et configuration pour un déploiement dans le cloud"
                 ],
-                result: "Sur le plan personnel, ce projet m’a permis de monter significativement en compétences sur des technologies que je ne maîtrisais pas auparavant et de découvrir le domaine de la cybersécurité. Pour l’entreprise, il représente un levier d’attractivité pour sa plateforme cloud, l’application étant préconfigurée pour un déploiement sur SAP BTP Kyma",
-                next: "Ajout d’un clone crédible de l’application protégée, réalisé en copiant le code exposé publiquement du site tout en modifiant les données avec des informations fictives mais cohérentes. Cette approche permet de piéger les attaquants en les redirigeant vers ce clone",
-                critique: "Le projet est aujourd’hui bien avancé et l’idée de base est pleinement implémentée (leurres, consultation des alertes, configuration, etc.). Certains axes d’amélioration restent à explorer, notamment la possibilité pour les utilisateurs de générer eux-mêmes un clone de leur application. Ce projet m’a permis de découvrir de nouvelles technologies que je maîtrise désormais et a fortement contribué à ma montée en compétences",
+                result: "Sur le plan personnel, ce projet m’a permis de monter significativement en compétences sur des technologies que je ne maîtrisais pas auparavant et de découvrir le domaine de la cybersécurité. Pour l’entreprise, il représente un levier d’attractivité pour sa plateforme cloud, l’application étant préconfigurée pour un déploiement sur SAP BTP Kyma.",
+                next: "Ajout d’un clone crédible de l’application protégée, réalisé en copiant le code exposé publiquement du site tout en modifiant les données avec des informations fictives mais cohérentes. Cette approche permet de piéger les attaquants en les redirigeant vers ce clone.",
+                critique: "Le projet est aujourd’hui bien avancé et l’idée de base est pleinement implémentée (leurres, consultation des alertes, configuration, etc.). Certains axes d’amélioration restent à explorer, notamment la possibilité pour les utilisateurs de générer eux-mêmes un clone de leur application. Ce projet m’a permis de découvrir de nouvelles technologies que je maîtrise désormais et a fortement contribué à ma montée en compétences.",
                 skills: [
                     {
                         name: "Angular", 
@@ -75,19 +75,18 @@ export default {
                 title: "Portfolio",
                 image: "portfolio_screen.jpg",
                 date: "2025",
-                presentation: "Mon portfolio est une application web développée avec Vue.js ayant pour but de montrer mon profil et mes compétences",
-                objectives: "Dans le cadre de mon master en ingénierie logicielle à l’ISCOD, j’ai développé une application web pour mon portfolio destinée à montrer mes compétences, mes réalisations ainsi que mon parcours professionnel",
-                challenges: "L’enjeu est de pouvoir démontrer mes compétences, mes réalisations et mon parcours professionnel de façon claire et constructive, et en respectant les consignes et la grille d’évaluation du portfolio donnée par l’ISCOD",
+                presentation: "Mon portfolio est une application web développée avec Vue.js ayant pour but de présenter mon profil et mes compétences.",
+                objectives: "Dans le cadre de mon master en ingénierie logicielle à l’ISCOD, j’ai développé une application web pour mon portfolio destinée à mettre en avant mes compétences, mes réalisations ainsi que mon parcours professionnel.",
+                challenges: "L’enjeu est de pouvoir démontrer mes compétences, mes réalisations et mon parcours professionnel de façon claire et constructive, tout en respectant les consignes et la grille d’évaluation du portfolio fournie par l’ISCOD.",
                 steps: [
                     "Conception des designs UI pour l’application",
-                    "Apprentissage de Vue.js à l’aide de tutoriels de la documentation Vue.js",
-                    "Rédaction des articles de compétences, réalisations et du parcours professionnel",
+                    "Apprentissage de Vue.js à l’aide de tutoriels et de la documentation officielle",
+                    "Rédaction des articles sur les compétences, les réalisations et le parcours professionnel",
                     "Développement de l’application avec Vue.js"
-
                 ],
-                result: "Sur le plan personnel, ce projet m’a permis d’apprendre une nouvelle compétence et technologie, Vue.js, et me permet d’avoir un support supplémentaire pour montrer mes compétences dans le monde professionnel",
-                next: "Continuer à améliorer l’application en y ajoutant de nouvelles compétences acquises et réalisations/expériences qui en découlent, ainsi que l’amélioration des animations et du style de l’application",
-                critique: "Mon portfolio est terminé et présente bien tout ce qu’un portfolio doit contenir : mes compétences techniques et non techniques, mes réalisations et mon parcours professionnel avec toutes mes expériences et formations",
+                result: "Sur le plan personnel, ce projet m’a permis d’apprendre une nouvelle compétence et technologie, Vue.js, et me permet de disposer d’un support supplémentaire pour valoriser mes compétences dans le monde professionnel.",
+                next: "Continuer à améliorer l’application en y ajoutant de nouvelles compétences acquises, des réalisations et expériences supplémentaires, ainsi qu’en perfectionnant les animations et le style de l’application.",
+                critique: "Mon portfolio est terminé et présente l’ensemble des éléments attendus : mes compétences techniques et non techniques, mes réalisations et mon parcours professionnel avec toutes mes expériences et formations.",
                 skills: [
                     {
                         name: "VueJS", 
@@ -102,23 +101,23 @@ export default {
                 ],
                 
             },
-            {
-                slug: "datahub",
-                title: "DataHub",
-                image: "ciffreobona_logo.png",
-                date: "2021-2022",
-                presentation: "Le Datahub est une application permettant de gérer et de consulter les produits dont dispose l’entreprise Ciffreo Bona. L’application référence tous les produits de la marque et les classe dans différents groupes et sous-groupes",
-                objectives: "Dans le cadre d’un projet en entreprise, j’ai amélioré une application interne existante, le Datahub, destinée à centraliser et gérer les données produits de Ciffreo Bona de manière efficace. L’objectif était d’ajouter de nouvelles fonctionnalités à cette application et de corriger les nombreux bugs qu’elle comportait",
-                challenges: "L’enjeu est d’ajouter de nouvelles fonctionnalités à l’application existante demandées par le client, de corriger les bugs trouvés par le client ainsi que ceux identifiés par l’équipe de développement, et d’optimiser les performances de l’application",
-                steps: [
-                   "Formation sur Angular 1 et Node.js",
-                   "Ajout d’une nouvelle fonctionnalité de sous-catégorie pour classer les produits",
-                   "Correction de bugs trouvés par le client",
-                   "Ajout d’une fonctionnalité pour récupérer des données produits via une API d’une entreprise externe"
-                ],
-                result: "L’application est maintenant optimisée, avec de nouvelles fonctionnalités performantes, et de nombreux bugs ont été résolus. Le client peut désormais être autonome avec l’application ; les demandes ont fortement été réduites après l’ensemble des correctifs",
-                next: "L’application demande toujours un peu de maintenance sur certains points. Il faut également effectuer une migration vers des technologies plus récentes d’Angular et de Node.js, car les versions actuelles ne sont plus maintenues",
-                critique: "Le projet est aujourd’hui terminé, il n’y a plus besoin d’une maintenance importante. L’application fonctionne bien et est très optimisée au vu des technologies sur lesquelles elle repose. Personnellement, ce projet m’a appris à gérer la relation client et m’a donné une première expérience sur un projet en entreprise",
+                {
+                     slug: "datahub",
+                     title: "DataHub",
+                     image: "ciffreobona_logo.png",
+                     date: "2021-2022",
+                     presentation: "Le DataHub est une application permettant de gérer et de consulter les produits dont dispose l’entreprise Ciffreo Bona. L’application référence tous les produits de la marque et les classe dans différents groupes et sous-groupes.",
+                     objectives: "Dans le cadre d’un projet en entreprise, j’ai amélioré une application interne existante, le DataHub, destinée à centraliser et gérer les données produits de Ciffreo Bona de manière efficace. L’objectif était d’ajouter de nouvelles fonctionnalités à cette application et de corriger les nombreux bugs qu’elle comportait.",
+                     challenges: "L’enjeu était d’ajouter de nouvelles fonctionnalités à l’application existante demandées par le client, de corriger les bugs trouvés par le client ainsi que ceux identifiés par l’équipe de développement, et d’optimiser les performances de l’application.",
+                     steps: [
+                         "Formation sur Angular 1 et Node.js",
+                         "Ajout d’une nouvelle fonctionnalité de sous-catégorie pour classer les produits",
+                         "Correction de bugs trouvés par le client",
+                         "Ajout d’une fonctionnalité pour récupérer des données produits via une API d’une entreprise externe"
+                     ],
+                     result: "L’application est maintenant optimisée, avec de nouvelles fonctionnalités performantes, et de nombreux bugs ont été résolus. Le client peut désormais être autonome avec l’application ; les demandes ont fortement diminué après l’ensemble des correctifs.",
+                     next: "L’application nécessite toujours un peu de maintenance sur certains points. Il faut également effectuer une migration vers des technologies plus récentes d’Angular et de Node.js, car les versions actuelles ne sont plus maintenues.",
+                     critique: "Le projet est aujourd’hui terminé, il n’y a plus besoin d’une maintenance importante. L’application fonctionne bien et est très optimisée au vu des technologies sur lesquelles elle repose. Personnellement, ce projet m’a appris à gérer la relation client et m’a donné une première expérience sur un projet en entreprise.",
                 skills: [
                     {
                         name: "Angular", 
@@ -148,23 +147,23 @@ export default {
                 ],
 
             },
-            {
-                slug: "auribeau-judo",
-                title: "Auribeau Judo",
-                image: "logo_aurib.jpg",
-                date: "2020",
-                presentation: "Auribeau Judo est un site vitrine de mon ancien club de judo qui permet de consulter les actualités du club, les tarifs ainsi que les informations du club",
-                objectives: "Le site d’Auribeau Judo était vieillissant et peu pratique à gérer pour le professeur de judo qui s’en occupait. L’objectif était de faire une refonte complète du site pour en faire un site vitrine propre avec la possibilité d’ajouter des actualités du club plus simplement qu’en allant modifier le code (anciennement fait comme tel)",
-                challenges: "L’enjeu ici est de pouvoir proposer un site performant qui répond à la demande et qui permet d’ajouter des actualités via un simple formulaire depuis un back office",
-                steps: [
-                   "Définition des besoins du site",
-                   "Analyse du site existant",
-                   "Développement du site vitrine (statique)",
-                   "Développement du back office et de l’affichage dynamique des actualités"
-                ],
-                result: "Pour moi, ce projet m’a permis de mettre en pratique pour une première fois mes compétences récemment acquises et de progresser sur la technologie PHP. Pour le club, le site a permis à beaucoup d’utilisateurs de simplifier la consultation des actualités, mais aussi de toutes les informations du club (tarifs, horaires…), ainsi que de rendre plus accessible la création et la rédaction des actualités",
-                next: "Améliorer l’esthétique du site pour le rendre plus moderne, intégrer un webhook permettant de récupérer les articles postés sur Facebook afin de les ajouter automatiquement en tant qu’actualités sur le site",
-                critique: "Le projet est toujours fonctionnel aujourd’hui, plusieurs années après. Il m’a permis de me familiariser avec PHP, la gestion de projet et l’autonomie, tant du côté de la gestion des attentes client que du développement",
+                {
+                     slug: "auribeau-judo",
+                     title: "Auribeau Judo",
+                     image: "logo_aurib.jpg",
+                     date: "2020",
+                     presentation: "Auribeau Judo est un site vitrine de mon ancien club de judo qui permet de consulter les actualités, les tarifs ainsi que toutes les informations du club.",
+                     objectives: "Le site d’Auribeau Judo était vieillissant et peu pratique à gérer pour le professeur de judo qui s’en occupait. L’objectif était de faire une refonte complète du site pour en faire un site vitrine moderne, avec la possibilité d’ajouter des actualités du club plus simplement qu’en allant modifier le code (comme c’était le cas auparavant).",
+                     challenges: "L’enjeu ici était de pouvoir proposer un site performant qui réponde à la demande et qui permette d’ajouter des actualités via un simple formulaire depuis un back office.",
+                     steps: [
+                         "Définition des besoins du site",
+                         "Analyse du site existant",
+                         "Développement du site vitrine (statique)",
+                         "Développement du back office et de l’affichage dynamique des actualités"
+                     ],
+                     result: "Pour moi, ce projet m’a permis de mettre en pratique pour la première fois mes compétences récemment acquises et de progresser sur la technologie PHP. Pour le club, le site a permis à de nombreux utilisateurs de simplifier la consultation des actualités, mais aussi de toutes les informations du club (tarifs, horaires…), ainsi que de rendre plus accessible la création et la rédaction des actualités.",
+                     next: "Améliorer l’esthétique du site pour le rendre plus moderne, intégrer un webhook permettant de récupérer les articles postés sur Facebook afin de les ajouter automatiquement en tant qu’actualités sur le site.",
+                     critique: "Le projet est toujours fonctionnel aujourd’hui, plusieurs années après. Il m’a permis de me familiariser avec PHP, la gestion de projet et l’autonomie, tant du côté de la gestion des attentes client que du développement.",
                 skills: [
                     {
                         name: "PHP", 
