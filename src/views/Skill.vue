@@ -223,7 +223,7 @@ export default {
                 }
             },
             {
-                slug: 'autoformation',
+                slug: 'auto-formation',
                 name: "Capacité d'auto-formation",
                 image: "autoformation.png",
                 level: "Avancé",
