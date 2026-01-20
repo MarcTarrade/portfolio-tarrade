@@ -350,7 +350,7 @@ export default {
                                     </router-link>
                                     <p class="modal-text">{{ project.description }}</p>
                                     <div class="project-link-container">
-                                        <router-link>
+                                        <router-link :to="project.link">
                                             <LinkIcon/>
                                             <span class="link-name">{{ project.title }}</span>
                                         </router-link>
@@ -404,6 +404,12 @@ export default {
                                         <b>{{ project.title }}</b>
                                     </router-link>
                                     <p class="modal-text">{{ project.description }}</p>
+                                    <div class="project-link-container">
+                                        <router-link :to="project.link">
+                                            <LinkIcon/>
+                                            <span class="link-name">{{ project.title }}</span>
+                                        </router-link>
+                                    </div>
                                 </div>
                             </div>
                             <h3 class="modal-sub-title">Mon auto-critique:</h3>
