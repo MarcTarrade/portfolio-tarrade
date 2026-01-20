@@ -9,6 +9,16 @@ export default {
         CalendarIcon,
         Modal
     },
+    watch: {
+        openModalIndex(newVal) {
+            if (newVal == null) {
+                this.$router.push({ query: {}});
+                return;
+            }
+            let project = this.projects[newVal]
+            this.$router.push({ query: { project: project.slug } });
+        }
+    },
     data() {
         return {
             openModalIndex: null,

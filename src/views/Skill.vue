@@ -15,6 +15,16 @@ export default {
         const route = useRoute();
         return { route };
     },
+    watch: {
+        openModalIndex(newVal) {
+            if (newVal == null) {
+                this.$router.push({ query: {}});
+                return;
+            }
+            let skill = this.skills[newVal]
+            this.$router.push({ query: { skill: skill.slug } });
+        }
+    },
     data() {
         return {
             openModalIndex: null,
