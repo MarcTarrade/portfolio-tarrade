@@ -2,7 +2,7 @@
     <div v-if="visible" class="modal-overlay" @click.self="close">
         <div class="modal-content">
             <slot />
-            <button class="modal-close" @click="close">
+            <button class="modal-close" @click="close" title="closing modal button">
                 <CloseIcon/>
             </button>
         </div>
@@ -18,6 +18,15 @@ export default {
     },
     props: {
         visible: { type: Boolean, required: true }
+    },
+    watch: {
+        visible(newVal) {
+            if (newVal) {
+                document.body.classList.add('no-scroll');
+            } else {
+                document.body.classList.remove('no-scroll');
+            }
+        }
     },
     emits: ['close'],
     methods: {

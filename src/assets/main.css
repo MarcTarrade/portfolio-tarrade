@@ -38,3 +38,8 @@ svg {
     margin-bottom: 3rem;
     color: var(--primary-color);
 }
+
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+}
