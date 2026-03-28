@@ -4,7 +4,6 @@ npm run build-only
 
 cd dist
 
-echo > .nojekyll
 
 git init
 git checkout -B main

@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-    <img src="/lac_allos.jpg" alt="lac_allos" class="background-image">
+    <img src="/lac_allos.webp" alt="lac_allos" class="background-image">
     <h1 class="name-title">TARRADE Marc</h1>
         <div class="abstract-container">
             <p class="abstract-text">Passionné par les technologies web et la cybersécurité, je poursuis actuellement un Master en ingénierie logicielle à l’ISCOD en alternance chez SAP, où je participe à des projets liés à la cyber sécurité. Fort d’expériences variées en développement fullstack, en IA et en sécurité applicative, j’aime concevoir des solutions innovantes, performantes et sécurisées. Curieux, rigoureux et orienté résultats, je cherche à allier excellence technique et impact concret dans mes projets.</p>
