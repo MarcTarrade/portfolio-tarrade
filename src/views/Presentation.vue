@@ -3,7 +3,7 @@
     <div class="wrapper">
         <h1 class="view-title">Présentation</h1>
         <p class="presentation-text">
-            Passionné par les technologies web et la cybersécurité, je poursuis actuellement un Master en ingénierie logicielle à l’ISCOD en alternance chez SAP, où je contribue à des projets en lien avec la sécurité informatique. Fort d’expériences variées en développement full stack, en intelligence artificielle et en sécurité applicative, j’apprécie concevoir des solutions à la fois innovantes, performantes et sécurisées
+            Passionné par les technologies web et la cybersécurité, je poursuis actuellement un Mastère en ingénierie logicielle à l’ISCOD en alternance chez SAP, où je contribue à des projets en lien avec la sécurité informatique. Fort d’expériences variées en développement full stack, en intelligence artificielle et en sécurité applicative, j’apprécie concevoir des solutions à la fois innovantes, performantes et sécurisées
         </p>
         <h2 class="presentation-sub-title">Mes valeurs</h2>
         <p class="presentation-text">

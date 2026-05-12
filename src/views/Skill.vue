@@ -155,7 +155,7 @@ export default {
                     {
                         title: "Portfolio",
                         link: "/projects?project=portfolio",
-                        description: "Conception et développement d’un portfolio dans le cadre de mon master en ingénierie logicielle. L’application a été entièrement développée en Vue.js ; le site est performant, optimisé et responsive. Il respecte l’ensemble des critères définis et intègre également des fonctionnalités telles qu’un thème sombre / clair et une traduction du site en anglais"
+                        description: "Conception et développement d’un portfolio dans le cadre de mon mastère en ingénierie logicielle. L’application a été entièrement développée en Vue.js ; le site est performant, optimisé et responsive. Il respecte l’ensemble des critères définis et intègre également des fonctionnalités telles qu’un thème sombre / clair et une traduction du site en anglais"
                     }
                 ],
                 autocritique: {
@@ -212,7 +212,7 @@ export default {
                     {
                         title: "Portfolio",
                         link: "/projects?project=portfolio",
-                        description: "Autonomie complète sur la réalisation de mon portfolio dans le cadre de mon master en ingénierie logicielle à l’ISCOD. J’ai développé ce projet en respectant uniquement les règles imposées, tout en intégrant les retours fournis par mon Learning Coach."
+                        description: "Autonomie complète sur la réalisation de mon portfolio dans le cadre de mon mastère en ingénierie logicielle à l’ISCOD. J’ai développé ce projet en respectant uniquement les règles imposées, tout en intégrant les retours fournis par mon Learning Coach."
                     }
                 ],
                 autocritique: {

@@ -86,7 +86,7 @@ export default {
                 image: "portfolio_screen.jpg",
                 date: "2025",
                 presentation: "Mon portfolio est une application web développée avec Vue.js ayant pour but de présenter mon profil et mes compétences.",
-                objectives: "Dans le cadre de mon master en ingénierie logicielle à l’ISCOD, j’ai développé une application web pour mon portfolio destinée à mettre en avant mes compétences, mes réalisations ainsi que mon parcours professionnel.",
+                objectives: "Dans le cadre de mon mastère en ingénierie logicielle à l’ISCOD, j’ai développé une application web pour mon portfolio destinée à mettre en avant mes compétences, mes réalisations ainsi que mon parcours professionnel.",
                 challenges: "L’enjeu est de pouvoir démontrer mes compétences, mes réalisations et mon parcours professionnel de façon claire et constructive, tout en respectant les consignes et la grille d’évaluation du portfolio fournie par l’ISCOD.",
                 steps: [
                     "Conception des designs UI pour l’application",

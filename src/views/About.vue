@@ -104,11 +104,11 @@ export default {
                 },
                 {
                     img: "/nextsourcia.jpg",
-                    title: "Developpeur Web",
+                    title: "Développeur Web",
                     date: "Octobre 2021 - Septembre 2022",
                     place: "NextSourcia",
                     type: "experience",
-                    responsibility: "Developpeur full-stack",
+                    responsibility: "Développeur full-stack",
                     status: 'CDI',
                     details: [
                         "Maintenance d’une application web",
@@ -153,11 +153,11 @@ export default {
                 },
                 {
                     img: "/SAP.png",
-                    title: "Developpeur cyber sécurité",
+                    title: "Développeur cyber sécurité",
                     date: "Mai - Août 2021",
                     place: "SAP",
                     type: "experience",
-                    responsibility: "Developpeur DevOps",
+                    responsibility: "Développeur DevOps",
                     status: 'Stage',
                     details: [
                         "Configuration de déploiement de l’application sur Kubernetes",
@@ -204,29 +204,29 @@ export default {
                 },
                 {
                     img: "/SAP.png",
-                    title: "Developpeur IA",
+                    title: "Développeur IA",
                     date: "Janvier 2020 - Février 2020",
                     place: "SAP",
                     type: "experience",
-                    responsibility: "Developpeur machine learning",
+                    responsibility: "Développeur machine learning",
                     status: 'Stage',
                     details: [
                         "Apprentissage des technologies de machine learning",
-                        "Developpement d’un script de machine learning detectant des objets sur une image",
+                        "Développement d’un script de machine learning detectant des objets sur une image",
                         "Adaptation de ce script en application pour détecter sur une vidéo",
                         "Déploiement de l’application sur le réseau de caméra de l’entreprise"
                     ]
                 },
                 {
                     img: "/SAP.png",
-                    title: "Developpeur cyber sécurité",
+                    title: "Développeur cyber sécurité",
                     date: "Mai 2019 - Juin 2019",
                     place: "SAP",
                     type: "experience",
-                    responsibility: "Developpeur",
+                    responsibility: "Développeur",
                     status: 'Stage',
                     details: [
-                        "Developpement d’un module d’analyse de requête http",
+                        "Développement d’un module d’analyse de requête http",
                         "Participation à des réunions d’équipe"
                     ],
                     skills: [
