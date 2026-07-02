@@ -84,7 +84,7 @@ export default {
                 slug: "portfolio",
                 title: "Portfolio",
                 image: "portfolio_screen.jpg",
-                date: "2025",
+                date: "2026",
                 presentation: "Mon portfolio est une application web développée avec Vue.js ayant pour but de présenter mon profil et mes compétences.",
                 objectives: "Dans le cadre de mon mastère en ingénierie logicielle à l’ISCOD, j’ai développé une application web pour mon portfolio destinée à mettre en avant mes compétences, mes réalisations ainsi que mon parcours professionnel.",
                 challenges: "L’enjeu est de pouvoir démontrer mes compétences, mes réalisations et mon parcours professionnel de façon claire et constructive, tout en respectant les consignes et la grille d’évaluation du portfolio fournie par l’ISCOD.",
@@ -186,6 +186,48 @@ export default {
                         link: "/skills?skill=autonomie",
                     }
                 ],
+            },
+            {
+                slug: "pmt",
+                title: "PMT",
+                image: "PMT.png",
+                date: "2025",
+                presentation: "PMT est une plateforme de gestion de projet collaboratif destinée aux équipes de développement logiciel. L'objectif est de créer une application qui permettra aux équipes de planifier, suivre et collaborer sur des projets de manière efficace. Cette application vise à améliorer la productivité et la communication au sein des équipes de développement logiciel. L'application a été développée dans le cadre d’un projet individuel à l’ISCOD, avec pour objectif de mettre en pratique les compétences acquises en développement logiciel et en gestion de projet.",
+                objectives: "Dans le cadre de mon mastère en ingénierie logicielle à l’ISCOD, j’ai développé une application web pour la gestion de projet collaboratif destinée aux équipes de développement logiciel. L’objectif était de créer une application avec les compétences acquises lors du module de développement logiciel, en mettant l’accent sur la technique et la qualité du code. Pour ce faire des technologies m'ont été imposés (apprises pendant la formation du module): Angular pour le front-end, SpringBoot pour le back-end, une base de données au choix (Postgres ou MySQL), Git et au choix les IDE IntelliJ ou Eclipse.",
+                challenges: "L'enjeu était de créer une application fonctionnelle et performante, en respectant les contraintes techniques imposées par le module de développement logiciel et pouvoir démontrer que les compétences que j'ai acquises durant la formation sont bien maîtrisées. Le risque majeur était de ne pas réussir à mettre en place une architecture solide et évolutive pour l’application, ainsi que de ne pas respecter les bonnes pratiques de développement logiciel ou encore de ne pas réussir à implémenter certaines fonctionnalités demandées par le client.",
+                steps: [
+                    "Identifier et comprendre les besoins du client",
+                    "Définir les fonctionnalités à l'aide des user stories fournis",
+                    "Concevoir l'architecture de la base de données et fournir un schéma relationnel ainsi qu'un script SQL pour la création de la base de données",
+                    "Concevoir l'architecture de l'application en utilisant les bonnes pratiques de développement logiciel avec Angular et SpringBoot",
+                    "Développer une interface utilisateur intuitive avec Angular",
+                    "Implémenter les fonctionnalités côté serveur avec SpringBoot",
+                    "Livrer une application fonctionnelle et performante, et mettre le code source à disposition sur un dépôt GitHub/GitLab",
+                    "Ecrire des tests automatisés pour valider le bon fonctionnement des fonctionnalités et garantir la stabilité de l'application tant côté backend que frontend et livrer les rapports de tests",
+                    "Industrialiser le projet en conteneurisant le front-end et le back-end avec Docker, et en fournissant des images pour faciliter le déploiement de l'application",
+                    "Rédiger une documentation pour le processus de déploiement de l'application",
+                    "Mettre en place une chaîne d'intégration continue avec GitHuB Actions pour automatiser les tests et le déploiement de l'application"
+                ],
+                result: "Ce projet m'a permis de mettre en pratique les compétences acquises lors de ma formation à l’ISCOD, notamment en développement logiciel avec Angular et SpringBoot, ainsi qu’en gestion de projet. L’application est fonctionnelle et répond aux besoins du client, avec une interface utilisateur intuitive et des fonctionnalités performantes. Le code source est disponible sur un dépôt GitHub, et des tests automatisés ont été mis en place pour garantir la stabilité de l'application.",
+                next: "L'application est maintenant fonctionnelle et répond aux besoins du client. Cependant, il est possible d'améliorer certaines fonctionnalités et d'ajouter de nouvelles fonctionnalités pour répondre à l'évolution des besoins du client. Il est également possible d'améliorer la documentation qui est actuellement très peu développée et améliorer >les tests automatisés pour garantir la stabilité de l'application à long terme.",
+                critique: "Le projet est aujourd'hui terminé et fonctionnel. Il m'a permis de mettre en pratique les compétences acquises lors de ma formation à l’ISCOD, notamment en développement logiciel avec Angular et SpringBoot. L'application est performante et répond aux besoins du client. Cependant, il est possible d'améliorer certaines fonctionnalités et d'ajouter de nouvelles fonctionnalités pour répondre à l'évolution des besoins du client.",
+                skills: [
+                    {
+                        name: "Angular", 
+                        image: 'Angular_logo.svg.png',
+                        link: "/skills?skill=angular",
+                    }, 
+                    {
+                        name: "Docker", 
+                        image: 'docker_logo.png',
+                        link: "/skills?skill=docker",
+                    },
+                    {
+                        name: "Autonomie",
+                        image: 'autonomie.png',
+                        link: "/skills?skill=autonomie",
+                    }
+                ]
             }]
         }
     },
