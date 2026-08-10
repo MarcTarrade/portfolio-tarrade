@@ -1,5 +1,6 @@
 <script>
 import CalendarIcon from '@/components/icons/CalendarIcon.vue';
+import LinkIcon from '@/components/icons/LinkIcon.vue';
 import Modal from '@/components/Modal.vue';
 import { onMounted, watch } from 'vue';
 import { useRoute } from 'vue-router';
@@ -7,7 +8,8 @@ import { useRoute } from 'vue-router';
 export default {
     components: {
         CalendarIcon,
-        Modal
+        Modal,
+        LinkIcon
     },
     watch: {
         openModalIndex(newVal) {
@@ -28,19 +30,33 @@ export default {
                 title: "Cloud Active Defense",
                 image: "SunDEW_logo.png",
                 date: "2024-2026",
-                presentation: "Cloud Active Defense est une application de cybersécurité permettant de déployer des leurres au sein d’applications cloud clientes afin de les protéger. Ces leurres ont pour objectif de tromper les pirates informatiques qui tenteraient de compromettre l’application.",
-                objectives: "Dans un contexte où la cybersécurité devient de plus en plus critique, Cloud Active Defense permet de protéger des applications existantes sans nécessiter de modification de leur code. L’objectif est de sécuriser ces applications grâce à des leurres qui simulent des vulnérabilités, afin de détecter les tentatives d’attaque, puis de bloquer les attaquants (blacklist) et d’empêcher toute récidive.",
-                challenges: "L’enjeu principal était de protéger des applications, principalement web, hébergées dans le cloud, tout en permettant aux utilisateurs de configurer simplement Cloud Active Defense sans modifier leur code existant. Le risque majeur était de ne pas compromettre la sécurité ou la stabilité de l’application protégée en ajoutant cette surcouche, et d’éviter l’introduction de nouvelles failles.",
+                presentation: "Cloud Active Defense est une application de cybersécurité open-source permettant de déployer des leurres au sein d’applications cloud clientes afin de les protéger. Ces leurres ont pour objectif de tromper les pirates informatiques qui tenteraient de compromettre l’application. Lorsqu’un pirate tente d’exploiter un leurre, il est detecté et une alerte est générée ainsi l’attaquant peut être bloqué (blacklist) afin d’empêcher toute récidive. La configuration de ces leurres est entirement customisable par l'utilisateur via une interface web, ainsi il est possible de définir le leurre à injecter, comment detecter une activité suspecte et comment réagir en cas d’attaque. Ce projet a été réalisé dans le cadre de mon alternance chez SAP pendant mon mastère en ingénierie logicielle à l’ISCOD.",
+                objectives: "Dans un contexte où la cybersécurité devient de plus en plus critique, Cloud Active Defense permet de protéger des applications existantes sans nécessiter de modification de leur code. L’objectif est de sécuriser ces applications grâce à des leurres qui simulent des vulnérabilités et attirer des attaquants vers ces leurres, afin de détecter les tentatives d’attaque, puis de bloquer les attaquants (blacklist). L'objectif est de fournir une solution de sécurité efficace et facile à configurer pour les utilisateurs, tout en minimisant les risques pour l’application protégée et de pouvoir facilement déployer et maintenir cette solution dans le cloud sans intervention de l’utilisateur.",
+                challenges: "L’enjeu principal est de protéger des applications, principalement web, hébergées dans le cloud, tout en permettant aux utilisateurs de configurer simplement Cloud Active Defense sans modifier leur code existant et aussi de creer une interface utilisateur intuitive pour la configuration des leurres permettant a une personne non technique de les utiliser facilement . Le risque majeur était de ne pas compromettre la sécurité ou la stabilité de l’application protégée en ajoutant cette surcouche, et d’éviter l’introduction de nouvelles failles.",
                 steps: [
-                    "Optimisation du proxy d’injection de leurres",
-                    "Ajout d’une pipeline permettant de récupérer les logs d’alerte lors d’une détection via un leurre",
-                    "Conception de l’architecture du projet lors d’un Threat Modeling",
-                    "Développement de l’application permettant de configurer les leurres et de consulter les alertes",
-                    "Conteneurisation des différents services et configuration pour un déploiement dans le cloud"
+                    "Optimisation du proxy d’injection de leurres et correction de bugs",
+                    "Ajout d’une pipeline FluentD permettant de récupérer les logs d’alerte lors d’une détection via un leurre",
+                    "Envoie des alertes vers un service de gestion d'alertes (Loki)",
+                    "Conception de l’architecture du projet global lors d’un Threat Modeling",
+                    "Conception de l'architecture de base de données en créant un schéma relationnel",
+                    "Développement de l'API Node de configuration des leurres, de reception des alertes et de gestion du proxy de leurres",
+                    "Développement d'une interface utilisateur permettant de configurer les leurres et de consulter les alertes",
+                    "Conteneurisation des différents services avec docker et configuration d'un docker-compose pour le déploiement de l'application en local",
+                    "Publication du projet et du code source sur un dépôt GitHub public de l’entreprise",
+                    "Conception de test unitaire pour le proxy d’injection de leurres",
+                    "Mise en place de pipeline d’intégration continue avec GitHub Actions pour automatiser les tests",
+                    "Mise en place de pipeline de d'intégration continue pour générer automatiquement les images docker de l’application et les publier sur GitHub Container Registry",
+                    "Déploiement de l’application sur SAP BTP Kyma pour permettre aux utilisateurs de tester l’application et de la déployer facilement sur leur propre environnement cloud",
+                    "Utilisation de Helm pour faciliter le déploiement de l’application sur SAP BTP Kyma",
+                    "Ajout de Keycloak (IDP open-source) pour gérer l’authentification et l’autorisation des utilisateurs de l’application",
+                    "Ajout d'un nouveau service pour déployer automatiquement le proxy de leurres dans le cloud du client à partir de l'interface utilisateur",
+                    "Création d'un module comunautaire dans SAP BTP Kyma avec les équipes de SAP pour permettre aux utilisateurs de déployer facilement l’application sur Kyma et de la configurer via l’interface utilisateur de SAP BTP Kyma",
+                    "Réalisation d'un prototype permettant de cloner un application client pour y piéger les attaquants et de rediriger les attaques vers ce clone",
                 ],
-                result: "Sur le plan personnel, ce projet m’a permis de monter significativement en compétences sur des technologies que je ne maîtrisais pas auparavant et de découvrir le domaine de la cybersécurité. Pour l’entreprise, il représente un levier d’attractivité pour sa plateforme cloud, l’application étant préconfigurée pour un déploiement sur SAP BTP Kyma.",
-                next: "Ajout d’un clone crédible de l’application protégée, réalisé en copiant le code exposé publiquement du site tout en modifiant les données avec des informations fictives mais cohérentes. Cette approche permet de piéger les attaquants en les redirigeant vers ce clone.",
-                critique: "Le projet est aujourd’hui bien avancé et l’idée de base est pleinement implémentée (leurres, consultation des alertes, configuration, etc.). Certains axes d’amélioration restent à explorer, notamment la possibilité pour les utilisateurs de générer eux-mêmes un clone de leur application. Ce projet m’a permis de découvrir de nouvelles technologies que je maîtrise désormais et a fortement contribué à ma montée en compétences.",
+                result: "Sur le plan personnel, ce projet m’a permis de monter significativement en compétences sur des technologies que je ne maîtrisais pas auparavant comme Angular, Docker, Kubernetes ou Keycloak et de découvrir le domaine de la cybersécurité ainsi que les bonnes pratiques de développement et les règles de sécurité. Pour l’entreprise, il représente une vraie plus value en tant que produit open-source de cybersécurité et sert de levier d’attractivité pour sa plateforme cloud étant donnée que l'application est déployable sur sa propre plateforme cloud (SAP BTP). L'application est aujourd’hui fonctionnelle et permet de protéger des applications cloud existantes; Deployable facilement que ce soit via la configuration Helm ou via l’interface utilisateur de SAP BTP Kyma (module communautaire), elle permet aux utilisateurs de configurer les leurres et de consulter les alertes générées par les attaques. L’application est également open-source et disponible sur un dépôt GitHub public de l’entreprise.",
+                project_link: "https://github.com/SAP/cloud-active-defense",
+                next: "La prochaine étant serai d'ajouter d’un clone crédible de l’application protégée à partir du prototype déjà crée. Ce clone perfectionné pourrait modifié les données du site avec des informations fictives mais cohérentes. Cette approche permet de piéger les attaquants en les redirigeant vers ce clone et permettrait de mieux comprendre les comportements des attaquants sans exposer les données réelles.",
+                critique: "Le projet est aujourd’hui bien avancé et l’idée de base est pleinement implémentée (leurres, consultation des alertes, configuration, etc.). Certains axes d’amélioration restent à explorer, notamment la possibilité pour les utilisateurs de générer eux-mêmes un clone de leur application. Grace à ce projet, j’ai pu découvrir de nouvelles technologies que je maîtrise désormais et qui a fortement contribué à ma montée en compétences.",
                 skills: [
                     {
                         name: "Angular", 
@@ -85,18 +101,21 @@ export default {
                 title: "Portfolio",
                 image: "portfolio_screen.jpg",
                 date: "2026",
-                presentation: "Mon portfolio est une application web développée avec Vue.js ayant pour but de présenter mon profil et mes compétences.",
-                objectives: "Dans le cadre de mon mastère en ingénierie logicielle à l’ISCOD, j’ai développé une application web pour mon portfolio destinée à mettre en avant mes compétences, mes réalisations ainsi que mon parcours professionnel.",
-                challenges: "L’enjeu est de pouvoir démontrer mes compétences, mes réalisations et mon parcours professionnel de façon claire et constructive, tout en respectant les consignes et la grille d’évaluation du portfolio fournie par l’ISCOD.",
+                presentation: "Mon portfolio est une application web développée avec Vue.js dans le but de présenter mon profil, mes compétences, mes réalisations et mon parcours de manière claire, moderne et professionnelle. Il a été conçu comme un support de présentation à la fois personnel et technique, permettant de mettre en avant mon évolution en tant que développeur, mes acquis et les projets sur lesquels j’ai travaillé.",
+                objectives: "Dans le cadre de mon mastère en ingénierie logicielle à l’ISCOD, j’ai développé ce portfolio pour créer un espace de présentation adapté à un usage professionnel. L’objectif était de mettre en valeur mes compétences techniques et non techniques, d’exposer mes projets de façon organisée et de proposer une expérience de navigation fluide, responsive et cohérente, à la fois pour les recruteurs et pour les personnes qui souhaitent découvrir mon parcours.",
+                challenges: "Le principal défi était de réussir à transmettre un maximum d’informations utiles sans perdre en clarté ni en lisibilité. Il fallait créer une interface agréable à parcourir, structurer les contenus de façon intelligible, présenter mes expériences et mes compétences de manière cohérente, tout en respectant les consignes de l’ISCOD et en donnant une identité propre au site. Il fallait également penser l’application dans une logique de maintenance et d’évolution future, afin qu’elle puisse continuer à évoluer avec mon parcours.",
                 steps: [
-                    "Conception des designs UI pour l’application",
-                    "Apprentissage de Vue.js à l’aide de tutoriels et de la documentation officielle",
-                    "Rédaction des articles sur les compétences, les réalisations et le parcours professionnel",
-                    "Développement de l’application avec Vue.js"
+                    "Conception de la structure du site et de l’arborescence des différentes pages",
+                    "Définition du design et de l’identité visuelle du portfolio",
+                    "Apprentissage de Vue.js à l’aide de tutoriels, de la documentation officielle et d’expérimentations pratiques",
+                    "Rédaction du contenu sur les compétences, les projets, le parcours professionnel et les expériences",
+                    "Développement de l’application avec Vue.js, en intégrant la navigation, les animations et la responsivité",
+                    "Mise en forme du contenu pour rendre la consultation claire, fluide et adaptée à un public professionnel",
+                    "Organisation des différentes sections pour offrir une lecture simple, cohérente et professionnelle"
                 ],
-                result: "Sur le plan personnel, ce projet m’a permis d’apprendre une nouvelle compétence et technologie, Vue.js, et me permet de disposer d’un support supplémentaire pour valoriser mes compétences dans le monde professionnel.",
-                next: "Continuer à améliorer l’application en y ajoutant de nouvelles compétences acquises, des réalisations et expériences supplémentaires, ainsi qu’en perfectionnant les animations et le style de l’application.",
-                critique: "Mon portfolio est terminé et présente l’ensemble des éléments attendus : mes compétences techniques et non techniques, mes réalisations et mon parcours professionnel avec toutes mes expériences et formations.",
+                result: "Sur le plan personnel, ce projet m’a permis d’approfondir mes compétences sur Vue.js, de renforcer ma capacité à concevoir une interface cohérente et de disposer d’un outil concret pour valoriser mon profil auprès d’un recruteur ou d’un interlocuteur professionnel. Le portfolio est aujourd’hui un support complet qui reflète à la fois mes compétences techniques, mon parcours et ma manière de travailler. Il m’a également permis de mieux structurer ma présentation professionnelle et de mieux communiquer mes acquis autour de projets concrets.",
+                next: "La prochaine étape serait d’ajouter de nouvelles réalisations, d’enrichir encore certaines sections avec de nouveaux projets et de continuer à améliorer l’expérience utilisateur grâce à des animations plus soignées, une navigation encore plus fluide et un design plus évolutif au fil de mon parcours.",
+                critique: "Le portfolio est aujourd’hui terminé et répond aux objectifs attendus. Il offre une représentation claire de mes compétences, de mes expériences et de mes projets, tout en restant simple à parcourir et agréable à consulter. C’est un projet à la fois personnel et professionnel, qui me sert de base de présentation dans le monde du travail et qui continue de constituer une vraie valeur ajoutée dans ma démarche de communication professionnelle.",
                 skills: [
                     {
                         name: "VueJS", 
@@ -116,18 +135,21 @@ export default {
                      title: "DataHub",
                      image: "ciffreobona_logo.png",
                      date: "2021-2022",
-                     presentation: "Le DataHub est une application permettant de gérer et de consulter les produits dont dispose l’entreprise Ciffreo Bona. L’application référence tous les produits de la marque et les classe dans différents groupes et sous-groupes.",
-                     objectives: "Dans le cadre d’un projet en entreprise, j’ai amélioré une application interne existante, le DataHub, destinée à centraliser et gérer les données produits de Ciffreo Bona de manière efficace. L’objectif était d’ajouter de nouvelles fonctionnalités à cette application et de corriger les nombreux bugs qu’elle comportait.",
-                     challenges: "L’enjeu était d’ajouter de nouvelles fonctionnalités à l’application existante demandées par le client, de corriger les bugs trouvés par le client ainsi que ceux identifiés par l’équipe de développement, et d’optimiser les performances de l’application.",
+                     presentation: "Le DataHub est une application web interne développée pour aider Ciffreo Bona à gérer et consulter l’ensemble de ses produits de manière organisée, cohérente et exploitable au quotidien. Elle permet de référencer les produits de la marque, de les classer dans des groupes et sous-groupes, et de faciliter leur consultation par les équipes internes.",
+                     objectives: "Dans le cadre d’un projet en entreprise, j’ai travaillé sur l’amélioration d’une application existante, le DataHub, destinée à centraliser et gérer efficacement les données produits de Ciffreo Bona. L’objectif était de répondre à des besoins métier concrets, ajouter des fonctionnalités utiles au quotidien, corriger des bugs importants et améliorer la qualité globale de l’application afin qu’elle soit plus stable, plus fluide et plus pertinente pour les utilisateurs.",
+                     challenges: "L’enjeu était à la fois fonctionnel et technique : il fallait intégrer de nouvelles demandes client, corriger les problèmes rencontrés dans l’application, améliorer la stabilité du logiciel et réduire les difficultés d’utilisation. Le projet demandait aussi une bonne compréhension des attentes du client, une capacité d’adaptation rapide et une montée en compétences sur des technologies comme Angular et Node.js, qui n’étaient pas encore maîtrisées au départ. Il fallait également travailler avec une application existante, ce qui impliquait de comprendre un code déjà en place et d’intervenir sans casser les fonctionnalités déjà opérationnelles.",
                      steps: [
-                         "Formation sur Angular 1 et Node.js",
-                         "Ajout d’une nouvelle fonctionnalité de sous-catégorie pour classer les produits",
-                         "Correction de bugs trouvés par le client",
-                         "Ajout d’une fonctionnalité pour récupérer des données produits via une API d’une entreprise externe"
+                         "Prise en main de l’application existante et compréhension de son fonctionnement",
+                         "Formation sur Angular et Node.js pour pouvoir évoluer sur cette base technique",
+                         "Ajout d’une nouvelle fonctionnalité de sous-catégorie pour mieux classer les produits",
+                         "Correction de bugs identifiés par le client et par l’équipe de développement",
+                         "Ajout d’une fonctionnalité permettant de récupérer des données produits via une API d’une entreprise externe",
+                         "Amélioration de la qualité globale de l’application pour une utilisation plus fluide et plus fiable",
+                         "Travail sur la compréhension des besoins métier afin d’ajuster les évolutions à la réalité de l’utilisation quotidienne"
                      ],
-                     result: "L’application est maintenant optimisée, avec de nouvelles fonctionnalités performantes, et de nombreux bugs ont été résolus. Le client peut désormais être autonome avec l’application ; les demandes ont fortement diminué après l’ensemble des correctifs.",
-                     next: "L’application nécessite toujours un peu de maintenance sur certains points. Il faut également effectuer une migration vers des technologies plus récentes d’Angular et de Node.js, car les versions actuelles ne sont plus maintenues.",
-                     critique: "Le projet est aujourd’hui terminé, il n’y a plus besoin d’une maintenance importante. L’application fonctionne bien et est très optimisée au vu des technologies sur lesquelles elle repose. Personnellement, ce projet m’a appris à gérer la relation client et m’a donné une première expérience sur un projet en entreprise.",
+                     result: "Sur le plan personnel, ce projet m’a permis d’acquérir une vraie expérience sur un environnement de travail réel, de mieux comprendre la logique de la maintenance applicative et de renforcer ma capacité à travailler avec un client. Pour l’entreprise, l’application a été significativement améliorée et est devenue plus complète, plus fiable et plus confortable à utiliser au quotidien. Le client a pu bénéficier d’un outil plus adapté à ses besoins, avec de nouvelles fonctionnalités pratiques et une meilleure stabilité générale.",
+                     next: "La suite logique de ce projet serait de poursuivre sa modernisation, notamment en migrant certaines parties vers des technologies plus récentes, d’optimiser encore certaines fonctionnalités et de continuer à améliorer l’expérience utilisateur afin de garantir une maintenance plus simple et plus durable sur le long terme.",
+                     critique: "Ce projet a été très formateur dans mon parcours professionnel. Il m’a permis de découvrir le fonctionnement d’un projet en entreprise, de travailler avec un client réel, de mieux comprendre l’importance de la qualité logicielle et d’acquérir une vraie expérience sur la résolution de problèmes concrets dans une application existante. C’est l’un des projets qui m’a le plus aidé à mieux appréhender la relation entre développement, besoin métier et satisfaction utilisateur.",
                 skills: [
                     {
                         name: "Angular", 
@@ -162,18 +184,22 @@ export default {
                      title: "Auribeau Judo",
                      image: "logo_aurib.jpg",
                      date: "2020",
-                     presentation: "Auribeau Judo est un site vitrine de mon ancien club de judo qui permet de consulter les actualités, les tarifs ainsi que toutes les informations du club.",
-                     objectives: "Le site d’Auribeau Judo était vieillissant et peu pratique à gérer pour le professeur de judo qui s’en occupait. L’objectif était de faire une refonte complète du site pour en faire un site vitrine moderne, avec la possibilité d’ajouter des actualités du club plus simplement qu’en allant modifier le code (comme c’était le cas auparavant).",
-                     challenges: "L’enjeu ici était de pouvoir proposer un site performant qui réponde à la demande et qui permette d’ajouter des actualités via un simple formulaire depuis un back office.",
+                     presentation: "Auribeau Judo est un site vitrine développé pour mon ancien club de judo afin de centraliser les informations essentielles du club, comme les actualités, les tarifs, les horaires et les informations pratiques. Le site a été pensé pour être accessible, simple à consulter et suffisamment moderne pour refléter l’image du club, tout en restant facile à maintenir et à mettre à jour par ses responsables.",
+                     objectives: "Le site d’Auribeau Judo était vieillissant et peu pratique à gérer pour le professeur de judo qui s’en occupait. Il avait été conçu avec seulement HTML et CSS, ce qui rendait la mise à jour des informations fastidieuse. L’objectif était donc de refaire entièrement le site pour le moderniser, améliorer son ergonomie et permettre au club d’ajouter facilement ses actualités via un back office simplifié, sans avoir à modifier directement le code.",
+                     challenges: "L’enjeu ici était de proposer un site plus moderne, plus fonctionnel et plus simple à utiliser, tout en répondant aux attentes du club. Il fallait créer une solution qui soit à la fois esthétique, pratique et facile à prendre en main pour les personnes chargées de la gestion du contenu. Le défi consistait aussi à réussir à transformer un site simple en un outil plus dynamique, tout en gardant une approche claire et adaptée à un public varié.",
                      steps: [
-                         "Définition des besoins du site",
-                         "Analyse du site existant",
-                         "Développement du site vitrine (statique)",
-                         "Développement du back office et de l’affichage dynamique des actualités"
+                         "Définition des besoins du site avec le club",
+                         "Analyse du site existant et identification des points à améliorer",
+                         "Création d’une maquette du site et validation avec le client",
+                         "Développement du site vitrine avec une structure plus moderne et plus claire",
+                         "Développement du back office et de l’affichage dynamique des actualités",
+                         "Rédaction du contenu du site et mise en forme des informations",
+                         "Déploiement du site sur un serveur web et mise en ligne"
                      ],
-                     result: "Pour moi, ce projet m’a permis de mettre en pratique pour la première fois mes compétences récemment acquises et de progresser sur la technologie PHP. Pour le club, le site a permis à de nombreux utilisateurs de simplifier la consultation des actualités, mais aussi de toutes les informations du club (tarifs, horaires…), ainsi que de rendre plus accessible la création et la rédaction des actualités.",
-                     next: "Améliorer l’esthétique du site pour le rendre plus moderne, intégrer un webhook permettant de récupérer les articles postés sur Facebook afin de les ajouter automatiquement en tant qu’actualités sur le site.",
-                     critique: "Le projet est toujours fonctionnel aujourd’hui, plusieurs années après. Il m’a permis de me familiariser avec PHP, la gestion de projet et l’autonomie, tant du côté de la gestion des attentes client que du développement.",
+                     result: "Pour moi, ce projet m’a permis de mettre en pratique pour la première fois mes compétences récemment acquises après ma formation en BTS SIO et de progresser sur la technologie PHP. Il m’a également permis de gagner en confiance dans mon travail, d’acquérir une première expérience concrète sur un projet réel et de mieux comprendre l’importance de la simplicité d’utilisation pour un client. Pour le club, le site a permis de simplifier la consultation des actualités, des tarifs, des horaires et d’autres informations pratiques, tout en rendant la mise à jour des contenus beaucoup plus accessible pour les responsables.",
+                     project_link: "http://www.auribeaujudo.fr/",
+                     next: "Le prochain objectif serait d’améliorer encore l’esthétique du site pour le rendre plus moderne, d’ajouter de nouvelles fonctionnalités utiles et d’intégrer un système plus automatisé pour récupérer des publications externes, par exemple via un webhook permettant de récupérer les articles postés sur Facebook afin de les ajouter automatiquement en tant qu’actualités sur le site.",
+                     critique: "Le projet est toujours fonctionnel aujourd’hui, plusieurs années après. Il m’a permis de me familiariser avec PHP, la gestion de projet et l’autonomie, tant du côté de la gestion des attentes client que du développement. Grâce à ce projet, j’ai pu mettre en pratique mes compétences, gagner en confiance dans mon travail et découvrir ce qu’impliquait la réalisation d’un site à destination d’un client réel. Bien que le site puisse encore être amélioré sur le plan esthétique et fonctionnel, il reste aujourd’hui un projet concret qui m’a beaucoup apporté sur le plan technique et personnel.",
                 skills: [
                     {
                         name: "PHP", 
@@ -307,6 +333,12 @@ export default {
                     </div>
                     <h3 class="modal-sub-title">Résultats:</h3>
                     <p class="modal-text">{{ project.result }}</p>
+                    <div v-if="project.project_link" class="project-link-container">
+                        <a :href="project.project_link" target="_blank" rel="noopener noreferrer">
+                            <LinkIcon/>
+                            <span class="link-name">Lien du projet</span>
+                        </a>
+                    </div>
                     <h3 class="modal-sub-title">Le lendemain du projet:</h3>
                     <p class="modal-text">{{ project.next }}</p>
                     <h3 class="modal-sub-title">Mon regard critique:</h3>
@@ -447,6 +479,26 @@ export default {
     }
     .steps-container li {
         margin-bottom: 0.3rem;
+    }
+
+    .project-link-container {
+        margin-top: 0.6rem;
+        margin-bottom: 0.8rem;
+        border: 1px solid var(--sub-text);
+        color: #000;
+        border-radius: 99px;
+        width: fit-content;
+        padding: 0.2rem 0.8rem;
+        transition: 0.3s ease;
+    }
+    .project-link-container a {
+        text-decoration: none;
+        color: currentColor;
+    }
+    .project-link-container:hover {
+        background-color: var(--tertiary-color);
+        cursor: pointer;
+        color: #FFF;
     }
 
     @media screen and (max-width: 425px){
