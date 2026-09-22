@@ -12,21 +12,21 @@ export default {
             timeline: [
                 {
                     img: "/SAP.png",
-                    title: "Développeur en cyber sécurité",
+                    title: "Développeur en cybersécurité",
                     place: "SAP",
                     type: "experience",
                     date: "Février 2024 - Mars 2026",
                     responsibility: "Développeur DevSecOps",
                     status: 'Alternant',
                     details: [
-                        "Apprentissage des technologies utilisés",
+                        "Apprentissage des technologies utilisées",
                         "Amélioration et maintenance de l’application existante",
                         "Participation à un Threat Modeling",
                         "Conception de l’architecture de la solution",
                         "Développement de l’application de gestion de la solution",
                         "Conteneurisation et configuration pour un déploiement dans le cloud",
                         "Documentation des API de l’application",
-                        "Intégration d’une pipeline CI/CD depuis Github actions"
+                        "Mise en place d’un pipeline CI/CD avec GitHub Actions",
                     ],
                     projects: [
                         {
@@ -78,7 +78,7 @@ export default {
                     place: "ISCOD",
                     type: "formation",
                     date: "Février 2024 - Mars 2026",
-                    description: "L'Institut Supérieur de Conception et de Développement (ISCOD) est un établissement spécialisé dans la formation d'experts en ingénierie logicielle. La pédagogie privilégie l'approche pratique avec des projets concrets et un accompagnement personnalisé pour développer l'expertise technique et les compétences humaines essentielles au métier d'ingénieur logiciel",
+                    description: "L’Institut Supérieur de Conception et de Développement (ISCOD) est un établissement spécialisé dans la formation d’experts en ingénierie logicielle. Sa pédagogie privilégie une approche pratique, fondée sur des projets concrets et un accompagnement personnalisé, afin de développer l’expertise technique et les compétences humaines essentielles au métier d’ingénieur logiciel.",
                     skills: [
                         {
                             name: "Angular",
@@ -113,8 +113,8 @@ export default {
                     details: [
                         "Maintenance d’une application web",
                         "Développement de nouvelles fonctionnalités",
-                        "Correction de bug" ,
-                        "Réunion et appel avec le client",
+                        "Correction de bugs",
+                        "Réunions et appels avec le client",
                         "Utilisation d’API d’entreprise externes"
                     ],
                     projects: [
@@ -153,7 +153,7 @@ export default {
                 },
                 {
                     img: "/SAP.png",
-                    title: "Développeur cyber sécurité",
+                    title: "Développeur en cybersécurité",
                     date: "Mai - Août 2021",
                     place: "SAP",
                     type: "experience",
@@ -161,7 +161,7 @@ export default {
                     status: 'Stage',
                     details: [
                         "Configuration de déploiement de l’application sur Kubernetes",
-                        "Intégration d’une pipeline de logs pour récupérer les alertes",
+                        "Intégration d’un pipeline de logs pour récupérer les alertes",
                         "Installation d’une application de consultation et de centralisation des logs"
                     ],
                     skills: [
@@ -181,9 +181,9 @@ export default {
                     img: "/iut_nice.jpg",
                     title: "Licence Développement d’applications mobiles",
                     date: "2020 - 2021",
-                    place: "IUT Nice Cote d'Azur",
+                    place: "IUT Nice Côte d’Azur",
                     type: "formation",
-                    description: "L’IUT Nice Côte d’Azur, rattaché à l’Université Côte d’Azur, propose des formations professionnalisantes orientées vers une insertion rapide dans le monde du travail, en combinant enseignements théoriques, projets concrets et liens étroits avec les entreprises. La Licence Professionnelle DAM (Développement d’Applications Mobiles) s’inscrit pleinement dans cette logique : elle forme des développeurs capables de concevoir, développer et maintenir des applications mobiles, en maîtrisant les technologies, les bonnes pratiques de développement et le cycle de vie complet d’une application. Axée sur la pratique, les projets et l’expérience en entreprise, cette formation permet d’acquérir des compétences directement exploitables sur le marché du travail",
+                    description: "L’IUT Nice Côte d’Azur, rattaché à l’Université Côte d’Azur, propose des formations professionnalisantes qui favorisent une insertion rapide dans le monde du travail, en combinant enseignements théoriques, projets concrets et liens étroits avec les entreprises. La licence professionnelle DAM (Développement d’applications mobiles) s’inscrit pleinement dans cette logique : elle forme des développeurs capables de concevoir, de développer et de maintenir des applications mobiles, en maîtrisant les technologies, les bonnes pratiques de développement et le cycle de vie complet d’une application. Axée sur la pratique, les projets et l’expérience en entreprise, cette formation permet d’acquérir des compétences directement exploitables sur le marché du travail.",
                     skills: [
                         {
                             name: "NodeJS",
@@ -212,21 +212,21 @@ export default {
                     status: 'Stage',
                     details: [
                         "Apprentissage des technologies de machine learning",
-                        "Développement d’un script de machine learning detectant des objets sur une image",
+                        "Développement d’un script de machine learning détectant des objets sur une image",
                         "Adaptation de ce script en application pour détecter sur une vidéo",
-                        "Déploiement de l’application sur le réseau de caméra de l’entreprise"
+                        "Déploiement de l’application sur le réseau de caméras de l’entreprise"
                     ]
                 },
                 {
                     img: "/SAP.png",
-                    title: "Développeur cyber sécurité",
+                    title: "Développeur en cybersécurité",
                     date: "Mai 2019 - Juin 2019",
                     place: "SAP",
                     type: "experience",
                     responsibility: "Développeur",
                     status: 'Stage',
                     details: [
-                        "Développement d’un module d’analyse de requête http",
+                        "Développement d’un module d’analyse de requêtes HTTP",
                         "Participation à des réunions d’équipe"
                     ],
                     skills: [
@@ -239,11 +239,11 @@ export default {
                 },
                 {
                     img: "/estienne_dorves.svg",
-                    title: "Lycée Estienne d'Orves: BTS SIO",
+                    title: "Lycée Honoré d’Estienne d’Orves : BTS SIO",
                     date: "2018 - 2020",
-                    place: "Lycée Honoré Estienne d'Orves",
+                    place: "Lycée Honoré d’Estienne d’Orves",
                     type: "formation",
-                    description: "Le lycée Honoré d’Estienne d’Orves à Nice propose le BTS Services Informatiques aux Organisations (SIO), une formation Bac + 2 visant à former des techniciens capables de concevoir, déployer et maintenir des solutions informatiques adaptées aux besoins des entreprises. Le BTS SIO offre deux spécialisations, SLAM (développement d’applications) et SISR (systèmes et réseaux), et s’appuie sur un enseignement mêlant théorie, projets pratiques et stages en entreprise afin de préparer efficacement à l’insertion professionnelle ou à la poursuite d’études",
+                    description: "Le lycée Honoré d’Estienne d’Orves à Nice propose le BTS Services Informatiques aux Organisations (SIO), une formation de niveau bac + 2 visant à former des techniciens capables de concevoir, déployer et maintenir des solutions informatiques adaptées aux besoins des entreprises. Le BTS SIO offre deux spécialisations, SLAM (développement d’applications) et SISR (systèmes et réseaux), et s’appuie sur un enseignement mêlant théorie, projets pratiques et stages en entreprise afin de préparer efficacement à l’insertion professionnelle ou à la poursuite d’études.",
                     skills: [
                         {
                             name: "PHP",
@@ -307,22 +307,22 @@ export default {
                         <div class="experience" v-if="item.type == 'experience'">
                             <div class="modal-content">
                                 <div class="horizontally">
-                                    <label>Responsabilité:</label>
+                                    <label>Responsabilité :</label>
                                     <p class="responsability">{{ item.responsibility }}</p>
                                 </div>
                                 <div class="horizontally">
-                                    <label>Statut:</label>
+                                    <label>Statut :</label>
                                     <p class="status">{{ item.status }}</p>
                                 </div>
                             </div>
                             <div class="missions-container">
-                                <h3 class="missions">Détails des missions:</h3>
+                                <h3 class="missions">Détails des missions :</h3>
                                 <ul>
                                     <li v-for="(detail, dIdx) in item.details" :key="dIdx">{{ detail }}</li>
                                 </ul>
                             </div>
                             <div class="project-container" v-if="item.projects && item.projects.length">
-                                <h3 class="projects">Projets liés:</h3>
+                                <h3 class="projects">Projets liés :</h3>
                                 <ul>
                                     <li v-for="(project, pIdx) in item.projects" :key="pIdx">
                                         <router-link class="project-link" :to="project.link">{{ project.name }}</router-link>
@@ -330,7 +330,7 @@ export default {
                                 </ul>
                             </div>
                             <div class="skill-container" v-if="item.skills && item.skills.length">
-                                <h3 class="skills">Compétences:</h3>
+                                <h3 class="skills">Compétences :</h3>
                                 <div class="skills-container">
                                     <router-link v-for="(skill, sIdx) in item.skills" :key="sIdx" :to="skill.link" class="skill-item">
                                         <img :src="'/portfolio-tarrade/' + skill.image" :alt="skill.name" class="skill-image">
@@ -341,11 +341,11 @@ export default {
                         </div>
                         <div class="formation" v-else-if="item.type == 'formation'">
                             <div class="modal-content">
-                                <h3 class="description">À propos:</h3>
+                                <h3 class="description">À propos :</h3>
                                 <p class="formation-description">{{ item.description }}</p>
                             </div>
                             <div class="skill-container" v-if="item.skills && item.skills.length">
-                                <h3 class="skills">Compétences acquises:</h3>
+                                <h3 class="skills">Compétences acquises :</h3>
                                 <div class="skills-container">
                                     <router-link v-for="(skill, sIdx) in item.skills" :key="sIdx" :to="skill.link" class="skill-item">
                                         <img :src="'/portfolio-tarrade/' + skill.image" :alt="skill.name" class="skill-image">

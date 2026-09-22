@@ -19,7 +19,7 @@
                 <hr>
                 <router-link to="/" class="link">Accueil</router-link>
                 <router-link to="/presentation" class="link">Présentation</router-link>
-                <router-link to="/about" class="link">A propos</router-link>
+                <router-link to="/about" class="link">À propos</router-link>
                 <router-link to="/projects" class="link">Projets</router-link>
                 <router-link to="/skills" class="link">Compétences</router-link>
             </div>

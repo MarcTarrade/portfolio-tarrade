@@ -24,19 +24,19 @@ export default {
                 </div>
                 <div class="email">
                     <MailIcon class="contact-icon"/>
-                    <h2>Adresse email</h2>
+                    <h2>Adresse e-mail</h2>
                     <p>marctarrade@gmail.com</p>
                 </div>
             </div>
             <div class="contact-form">
                 <form action="https://formspree.io/f/xwvvkled" method="POST" class="form">
-                    <label for="name">Nom:</label>
+                    <label for="name">Nom :</label>
                     <input type="text" id="name" name="name" required>
 
-                    <label for="email">Email *:</label>
+                    <label for="email">E-mail * :</label>
                     <input type="email" id="email" name="email" required>
 
-                    <label for="message">Message *:</label>
+                    <label for="message">Message * :</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
 
                     <p class="mandatory-fields">* Champs obligatoires</p>
